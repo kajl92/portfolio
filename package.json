@@ -16,6 +16,7 @@
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "del": "^3.0.0",
+    "eslint": "^4.6.1",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-pug": "^3.3.0",
     "gulp-rename": "^1.2.2",
