@@ -1,3 +1,3 @@
-console.log($);
-console.log('lorem');
-console.log(222222)
+console.log(25+25);
+console.log("stroka");
+console.log(typeof true);
