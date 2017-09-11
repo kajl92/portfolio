@@ -13,6 +13,7 @@ const sassGlob = require('gulp-sass-glob');
 const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config');
+const eslint = require('gulp-eslint');
 
 
 const paths = {
@@ -103,19 +104,42 @@ function fonts() {
     .pipe(gulp.dest(paths.fonts.dest));
 }
 
+// eslint
+function lintJs() {
+  return gulp.src(['src/scripts/*.js','!node_modules/**'])
+  .pipe(eslint({
+      rules: {
+          'my-custom-rule': 1,
+          'strict': 2
+      },
+      globals: [
+          'jQuery',
+          '$'
+      ],
+      options: {
+        fix: true
+      },
+      envs: [
+          'browser'
+      ]
+  }))
+  .pipe(eslint.formatEach('compact', process.stderr));
+}
+
 exports.templates = templates;
 exports.styles = styles;
 exports.clean = clean;
 exports.images = images;
 exports.fonts = fonts;
+exports.lintJs = lintJs;
 
 // работа
 gulp.task('default', gulp.series(
-  gulp.parallel(styles, templates, scripts, fonts, images),
+  gulp.parallel(styles, templates, scripts, lintJs, fonts, images),
   gulp.parallel(watch, server)
 ));
 // На продакшен
 gulp.task('build', gulp.series(
   clean,
-  gulp.parallel(styles, templates, scripts, fonts, images)
+  gulp.parallel(styles, templates, scripts,  lintJs, fonts, images)
 ));
