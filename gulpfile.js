@@ -13,6 +13,7 @@ const sassGlob = require('gulp-sass-glob');
 const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config');
+const eslint = require('gulp-eslint');
 
 
 const paths = {
@@ -30,6 +31,10 @@ const paths = {
     src: 'src/img/**/*.*',
     dest: 'build/assets/images'
   },
+  fonts: {
+    src: 'src/fonts/**/*.*',
+    dest: 'build/assets/fonts'
+  },
   scripts: {
     src: 'src/scripts/**/*.js',
     dest: 'build/assets/scripts'
@@ -39,7 +44,9 @@ const paths = {
 // pug
 function templates() {
   return gulp.src(paths.templates.pages)
-    .pipe(pug({ pretty: true }))
+    .pipe(pug({
+      pretty: true
+    }))
     .pipe(gulp.dest(paths.root));
 }
 
@@ -50,7 +57,9 @@ function styles() {
     .pipe(sassGlob())
     .pipe(sass())
     .pipe(sourcemaps.write())
-    .pipe(rename({suffix: '.min'}))
+    .pipe(rename({
+      suffix: '.min'
+    }))
     .pipe(gulp.dest(paths.styles.dest))
 }
 
@@ -62,8 +71,8 @@ function clean() {
 // webpack
 function scripts() {
   return gulp.src('src/scripts/app.js')
-  .pipe(gulpWebpack(webpackConfig, webpack))
-  .pipe(gulp.dest(paths.scripts.dest))
+    .pipe(gulpWebpack(webpackConfig, webpack))
+    .pipe(gulp.dest(paths.scripts.dest))
 }
 
 // Слежка за исходными файлами
@@ -71,6 +80,7 @@ function watch() {
   gulp.watch(paths.styles.src, styles);
   gulp.watch(paths.templates.src, templates);
   gulp.watch(paths.images.src, images);
+  gulp.watch(paths.fonts.src, fonts);
   gulp.watch(paths.scripts.src, scripts);
 }
 
@@ -88,18 +98,48 @@ function images() {
     .pipe(gulp.dest(paths.images.dest));
 }
 
+//переносим шрифты
+function fonts() {
+  return gulp.src(paths.fonts.src)
+    .pipe(gulp.dest(paths.fonts.dest));
+}
+
+// eslint
+function lintJs() {
+  return gulp.src(['src/scripts/*.js','!node_modules/**'])
+  .pipe(eslint({
+      rules: {
+          'my-custom-rule': 1,
+          'strict': 2
+      },
+      globals: [
+          'jQuery',
+          '$'
+      ],
+      options: {
+        fix: true
+      },
+      envs: [
+          'browser'
+      ]
+  }))
+  .pipe(eslint.formatEach('compact', process.stderr));
+}
+
 exports.templates = templates;
 exports.styles = styles;
 exports.clean = clean;
 exports.images = images;
+exports.fonts = fonts;
+exports.lintJs = lintJs;
 
 // работа
 gulp.task('default', gulp.series(
-  gulp.parallel(styles, templates, scripts, images),
+  gulp.parallel(styles, templates, scripts, lintJs, fonts, images),
   gulp.parallel(watch, server)
 ));
 // На продакшен
 gulp.task('build', gulp.series(
   clean,
-  gulp.parallel(styles, templates, scripts, images)
+  gulp.parallel(styles, templates, scripts,  lintJs, fonts, images)
 ));
