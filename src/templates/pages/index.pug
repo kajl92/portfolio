@@ -5,7 +5,35 @@ block variables
 
 block content 
   .wrapper
-    .container
-      svg(width="55" height="55")
-        use(xlink:href="assets/images/sprite/sprite.svg#github_round")
-      include ../common/hamburger-menu
+    .welcome
+      .welcome__up
+        .avatar
+          img.avatar__image(src="assets/images/content/man1.jpg", alt="")
+        .info
+          span.info__name Максим Кайль
+          span.info__text Личный сайт веб разработчика
+        ul.social
+          li.social__item
+            .social__pic
+              a.social__link(href="#")
+                svg.social__icon
+                  use(xlink:href="assets/images/sprite/sprite.svg#vk")
+          li.social__item
+            .social__pic
+              a.social__link(href="#")
+                svg.social__icon
+                  use(xlink:href="assets/images/sprite/sprite.svg#github")
+          li.social__item
+            .social__pic
+              a.social__link(href="#")
+                svg.social__icon
+                  use(xlink:href="assets/images/sprite/sprite.svg#in")
+      .welcome__down
+        ul.pages
+          li.pages__item
+            a.pages__link(href="./work.html") Мои работы
+          li.pages__item
+            a.pages__link(href="./about.html") Обо мне
+          li.pages__item
+            a.pages__link(href="./blog.html") Блог
+    a.authorization(href="#") Авторизоваться  

@@ -1,2 +1,17 @@
-@import './common/**/*.scss';
-@import './pages/**/*.scss'
+//colors
+$dark: #122620;
+$green: #4e8839;
+$w-green: #5f8a51;
+$d-green: #457935;
+
+//fonts
+@import './common/fonts.scss';
+//layout
+@import './layout/normalize.scss';
+@import './layout/layout.scss';
+
+// pages
+@import './pages/index.scss';
+@import './pages/blog.scss';
+@import './pages/about.scss';
+@import './pages/work.scss';

@@ -7,7 +7,7 @@ const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
-const sassGlob = require('gulp-sass-glob');
+// const sassGlob = require('gulp-sass-glob');
 
 // scripts
 const gulpWebpack = require('gulp-webpack');
@@ -51,6 +51,15 @@ const paths = {
   }
 }
 
+// Слежка за исходными файлами
+function watch() {
+  gulp.watch(paths.styles.src, styles);
+  gulp.watch(paths.templates.src, templates);
+  gulp.watch(paths.images.src, images);
+  gulp.watch(paths.fonts.src, fonts);
+  gulp.watch(paths.scripts.src, scripts);
+}
+
 // pug
 function templates() {
   return gulp.src(paths.templates.pages)
@@ -64,7 +73,7 @@ function templates() {
 function styles() {
   return gulp.src('./src/styles/app.scss')
     .pipe(sourcemaps.init())
-    .pipe(sassGlob())
+    // .pipe(sassGlob())
     .pipe(sass())
     .pipe(sourcemaps.write())
     .pipe(rename({
@@ -156,15 +165,6 @@ function lintJs() {
       ]
     }))
     .pipe(eslint.formatEach('compact', process.stderr));
-}
-
-// Слежка за исходными файлами
-function watch() {
-  gulp.watch(paths.styles.src, styles);
-  gulp.watch(paths.templates.src, templates);
-  gulp.watch(paths.images.src, images);
-  gulp.watch(paths.fonts.src, fonts);
-  gulp.watch(paths.scripts.src, scripts);
 }
 
 exports.templates = templates;
