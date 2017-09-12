@@ -15,6 +15,12 @@ const webpack = require('webpack');
 const webpackConfig = require('./webpack.config');
 const eslint = require('gulp-eslint');
 
+// sprite svg
+const svgSprite = require('gulp-svg-sprite');
+const svgmin = require('gulp-svgmin');
+const cheerio = require('gulp-cheerio');
+const replace = require('gulp-replace');
+
 
 const paths = {
   root: './build',
@@ -26,6 +32,10 @@ const paths = {
   styles: {
     src: 'src/styles/**/*.scss',
     dest: 'build/assets/styles/'
+  },
+  sprite:{
+    scr: 'src/img/icons/*.svg',
+    dest: 'build/assets/images/sprite'
   },
   images: {
     src: 'src/img/**/*.*',
@@ -63,6 +73,36 @@ function styles() {
     .pipe(gulp.dest(paths.styles.dest))
 }
 
+//sprite svg
+function spriteSvg() {
+  return gulp.src('src/img/icons/*.svg')
+    // minify svg
+    .pipe(svgmin({
+      js2svg: {
+        pretty: true
+      }
+    }))
+    // remove all fill, style and stroke declarations in out shapes
+		.pipe(cheerio({
+			run: function ($) {
+				$('[fill]').removeAttr('fill');
+				$('[stroke]').removeAttr('stroke');
+				$('[style]').removeAttr('style');
+			},
+			parserOptions: {xmlMode: true}
+    }))
+    // cheerio plugin create unnecessary string '&gt;', so replace it.
+    .pipe(replace('&gt;', '>'))
+    .pipe(svgSprite({
+      mode: {
+        symbol: {
+          sprite: "../sprite.svg"
+        }
+      }
+    }))
+    .pipe(gulp.dest(paths.sprite.dest))
+}
+
 // del
 function clean() {
   return del(paths.root);
@@ -75,14 +115,6 @@ function scripts() {
     .pipe(gulp.dest(paths.scripts.dest))
 }
 
-// Слежка за исходными файлами
-function watch() {
-  gulp.watch(paths.styles.src, styles);
-  gulp.watch(paths.templates.src, templates);
-  gulp.watch(paths.images.src, images);
-  gulp.watch(paths.fonts.src, fonts);
-  gulp.watch(paths.scripts.src, scripts);
-}
 
 // Слежка build и reload браузер
 function server() {
@@ -94,7 +126,7 @@ function server() {
 
 //переносим картинки
 function images() {
-  return gulp.src(paths.images.src)
+  return gulp.src([paths.images.src, '!src/img/icons/**'])
     .pipe(gulp.dest(paths.images.dest));
 }
 
@@ -106,24 +138,33 @@ function fonts() {
 
 // eslint
 function lintJs() {
-  return gulp.src(['src/scripts/*.js','!node_modules/**'])
-  .pipe(eslint({
+  return gulp.src(['src/scripts/*.js', '!node_modules/**'])
+    .pipe(eslint({
       rules: {
-          'my-custom-rule': 1,
-          'strict': 2
+        'my-custom-rule': 1,
+        'strict': 2
       },
       globals: [
-          'jQuery',
-          '$'
+        'jQuery',
+        '$'
       ],
       options: {
         fix: true
       },
       envs: [
-          'browser'
+        'browser'
       ]
-  }))
-  .pipe(eslint.formatEach('compact', process.stderr));
+    }))
+    .pipe(eslint.formatEach('compact', process.stderr));
+}
+
+// Слежка за исходными файлами
+function watch() {
+  gulp.watch(paths.styles.src, styles);
+  gulp.watch(paths.templates.src, templates);
+  gulp.watch(paths.images.src, images);
+  gulp.watch(paths.fonts.src, fonts);
+  gulp.watch(paths.scripts.src, scripts);
 }
 
 exports.templates = templates;
@@ -132,14 +173,15 @@ exports.clean = clean;
 exports.images = images;
 exports.fonts = fonts;
 exports.lintJs = lintJs;
+exports.spriteSvg = spriteSvg;
 
 // работа
 gulp.task('default', gulp.series(
-  gulp.parallel(styles, templates, scripts, lintJs, fonts, images),
+  gulp.parallel(styles, templates, scripts, lintJs, fonts, spriteSvg, images),
   gulp.parallel(watch, server)
 ));
 // На продакшен
 gulp.task('build', gulp.series(
   clean,
-  gulp.parallel(styles, templates, scripts,  lintJs, fonts, images)
+  gulp.parallel(styles, templates, scripts, lintJs, fonts, spriteSvg, images)
 ));
