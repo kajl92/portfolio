@@ -1,3 +1,5 @@
+"use strict";
+
 const gulp = require('gulp');
 const pug = require('gulp-pug');
 const del = require('del');

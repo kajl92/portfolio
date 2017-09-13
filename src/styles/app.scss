@@ -4,10 +4,11 @@ $green: #4e8839;
 $w-green: #5f8a51;
 $d-green: #457935;
 
+@import './layout/normalize.scss';
 //fonts
 @import './common/fonts.scss';
 //layout
-@import './layout/normalize.scss';
+@import './layout/mixins.scss';
 @import './layout/layout.scss';
 
 // pages
