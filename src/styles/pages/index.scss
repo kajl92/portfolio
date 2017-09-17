@@ -1,9 +1,11 @@
 .welcome {
   background: url('../images/bg/forest-bg.jpg') center center no-repeat;
   background-size: cover;
+  width: 100vw;
+  height: 100vh;
 }
 
-.welcome {
+.welcome__user {
   width: rem(375px);
   height: rem(350px);
   position: absolute;
@@ -14,74 +16,8 @@
   border-radius: rem(10px) rem(10px) 0 0;
 }
 
-.welcome__desc {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: rem(40px);
-}
-
-.avatar {
-  width: rem(140px);
-  height: rem(138px);
-  border-radius: 50%;
-  overflow: hidden;
-  
-}
-
-.avatar__image {
-  width: 100%;
-}
-
-.info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: rem(15px);
-}
-
-.info__name {
-  @include roboto(medium);
-  color: #fff;
-  font-size: rem(28px);
-  text-align: center;
-}
-
-.info__text {
-  @include roboto(regular);
-  font-size: rem(16px);
-  color: #fff;
-  text-align: center;
-  margin-top: rem(5px);
-}
-
-.social {
-  margin-top: rem(38px);
-  display: flex;
-}
-
-.social__item {
-  margin-right: rem(30px);
-  &:last-child {
-    margin-right: 0;
-  }
-}
-
-.social__pic {
-  width: rem(28px);
-  height: rem(22px);
-}
-
-.social__icon {
-  width: 100%;
-  height: 100%;
-  fill: rgba(#fff, .5);
-  transition: .3s;
-  &:hover {
-    fill: $green;
-  }
+.user__info_padding {
+  margin-bottom: 35px;
 }
 
 .nav {

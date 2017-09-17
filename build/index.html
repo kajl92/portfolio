@@ -9,39 +9,36 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="welcome">
-        <div class="welcome__desc">
-          <div class="avatar"><img class="avatar__image" src="assets/images/content/man1.jpg" alt=""></div>
-          <div class="info"><span class="info__name">Максим Кайль</span><span class="info__text">Личный сайт веб разработчика</span></div>
+      <section class="welcome">
+        <div class="user welcome__user">
+          <div class="user__pic"><img class="user__avatar" src="../assets/images/content/man1.jpg" alt=""></div>
+          <div class="user__desc">
+            <div class="user__name">Максим Кайль</div>
+            <div class="user__info user__info_padding">Личный сайт веб разработчика</div>
+          </div>
           <ul class="social">
-            <li class="social__item">
-              <div class="social__pic"><a class="social__link" href="#">
-                  <svg class="social__icon">
-                    <use xlink:href="assets/images/sprite/sprite.svg#vk"></use>
-                  </svg></a></div>
-            </li>
-            <li class="social__item">
-              <div class="social__pic"><a class="social__link" href="#">
-                  <svg class="social__icon">
-                    <use xlink:href="assets/images/sprite/sprite.svg#github"></use>
-                  </svg></a></div>
-            </li>
-            <li class="social__item">
-              <div class="social__pic"><a class="social__link" href="#">
-                  <svg class="social__icon">
-                    <use xlink:href="assets/images/sprite/sprite.svg#in"></use>
-                  </svg></a></div>
-            </li>
+            <li class="social__item"><a class="social__link" href="#">
+                <svg class="social__svg">
+                  <use xlink:href="assets/images/sprite/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__link" href="#">
+                <svg class="social__svg">
+                  <use xlink:href="assets/images/sprite/sprite.svg#github"></use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__link" href="#">
+                <svg class="social__svg">
+                  <use xlink:href="assets/images/sprite/sprite.svg#in"></use>
+                </svg></a></li>
           </ul>
-        </div>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item"><a class="nav__link" href="./work.html">Мои работы</a></li>
-            <li class="nav__item"><a class="nav__link" href="./about.html">Обо мне</a></li>
-            <li class="nav__item"><a class="nav__link" href="./blog.html">Блог</a></li>
-          </ul>
-        </nav>
-      </div><a class="authorization-btn" href="#">Авторизоваться</a>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link" href="./work.html">Мои работы</a></li>
+              <li class="nav__item"><a class="nav__link" href="./about.html">Обо мне</a></li>
+              <li class="nav__item"><a class="nav__link" href="./blog.html">Блог</a></li>
+            </ul>
+          </nav>
+        </div><a class="authorization-btn" href="#">Авторизоваться</a>
+      </section>
     </div>
     <script src="assets/scripts/bundle.js"></script>
   </body>

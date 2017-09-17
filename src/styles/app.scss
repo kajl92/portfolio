@@ -14,7 +14,7 @@ $d-green: #457935;
 @import './layout/layout.scss';
 
 // pages
-// @import './pages/index.scss';
+@import './pages/index.scss';
 @import './pages/blog.scss';
 @import './pages/about.scss';
 @import './pages/work.scss';
