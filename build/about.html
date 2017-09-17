@@ -8,14 +8,300 @@
     <link rel="stylesheet" href="assets/styles/app.min.css">
   </head>
   <body>
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__item"><a class="nav__link" href="work.html">Мои работы</a></li>
-        <li class="nav__item"><a class="nav__link" href="blog.html">Блог</a></li>
-        <li class="nav__item"><a class="nav__link" href="about.html">Обо мне</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">Авторизация</a></li>
-      </ul>
-    </nav>
+    <div class="wrapper">
+      <section class="section head">
+        <div class="head__socials">
+          <ul class="social">
+            <li class="social__item"><a class="social__link" href="#">
+                <svg class="social__svg">
+                  <use xlink:href="assets/images/sprite/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__link" href="#">
+                <svg class="social__svg">
+                  <use xlink:href="assets/images/sprite/sprite.svg#github"></use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__link" href="#">
+                <svg class="social__svg">
+                  <use xlink:href="assets/images/sprite/sprite.svg#in"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+        <div class="head__menu">
+          <div class="hamburger"><a class="hamburger__link" href="#"><span class="hamburger-top"></span><span class="hamburger-center"></span><span class="hamburger-bottom"></span></a></div>
+        </div>
+        <div class="head__title">
+          <div class="section-title">
+            <svg class="head-title__pic">
+              <use xlink:href="assets/images/sprite/sprite.svg#portfolio_header"></use>
+            </svg>
+          </div>
+          <div class="user head__user">
+            <div class="user__pic"><img class="user__avatar" src="../assets/images/content/man1.jpg" alt=""></div>
+            <div class="user__desc">
+              <div class="user__name">Максим Кайль</div>
+              <div class="user__info">Личный сайт веб разработчика</div>
+            </div>
+          </div>
+        </div>
+        <div class="head__scroll-arrow"><a class="arrow__down" href="#">
+            <svg class="arrow__down-pic">
+              <use xlink:href="assets/images/sprite/sprite.svg#arrow_down"></use>
+            </svg></a></div>
+      </section>
+      <section class="section about">
+        <div class="about__left">
+          <div class="about__triangle about__triangle_left">
+            <svg class="triangle triangle_fill_gray" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 470 85" preserveAspectRatio="xMidYMin slice">
+              <polygon points="0,0   0,86   470.8,86   470,82"></polygon>
+            </svg>
+          </div>
+          <div class="about__left-title">
+            <svg class="about__left-pic">
+              <use xlink:href="assets/images/sprite/sprite.svg#about_header"></use>
+            </svg>
+            <div class="block__title">Обо мне</div>
+          </div>
+          <div class="about__left-content">
+            <div class="user-desc">
+              <div class="user-desc__img"><img class="user-desc__avatar" src="assets/images/content/man1.jpg" alt=""></div>
+              <div class="user-desc__title">
+                <div class="block-smalltitle">Кто я</div>
+              </div>
+              <div class="user-desc__text text__style">
+                <p>Я веб разработчик из Томска. Мне 25 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. </p><br>
+                <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about__right">
+          <div class="about__triangle about__triangle_right">
+            <svg class="triangle triangle_fill_white" xmlns:href="http://www.w3.org/2000/svg" viewbox="0 0 480 85" preserveAspectRatio="xMidYMin slice">
+              <polygon points="480,0   480,86   0,86   0,82"></polygon>
+            </svg>
+          </div>
+          <div class="about__right-title">
+            <div class="block-smalltitle">Чем я могу быть вам полезен</div>
+          </div>
+          <div class="about__right-desc text__style">
+            <p>Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.</p>
+          </div>
+          <div class="about__right-content">
+            <ul class="skills-list">
+              <li class="skills-list__item">
+                <div class="skills-row">
+                  <div class="skills-row__title">Frontend
+                    <ul class="skills-row__list">
+                      <li class="skills-row__item">
+                        <div class="skill">
+                          <svg class="skill__circle" width="130" height="130">
+                            <circle class="g-circles" r="45" cx="65" cy="65" stroke="#ccc" fill="none"></circle>
+                            <circle class="sector" r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)"></circle>
+                          </svg>
+                          <div class="skill__title">HTML5</div>
+                        </div>
+                      </li>
+                      <li class="skills-row__item">
+                        <div class="skill">
+                          <svg class="skill__circle" width="130" height="130">
+                            <circle class="g-circles" r="45" cx="65" cy="65" stroke="#ccc" fill="none"></circle>
+                            <circle class="sector" r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)"></circle>
+                          </svg>
+                          <div class="skill__title">CSS3</div>
+                        </div>
+                      </li>
+                      <li class="skills-row__item">
+                        <div class="skill">
+                          <svg class="skill__circle" width="130" height="130">
+                            <circle class="g-circles" r="45" cx="65" cy="65" stroke="#ccc" fill="none"></circle>
+                            <circle class="sector" r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)"></circle>
+                          </svg>
+                          <div class="skill__title">JavaScript & jQuery</div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="skills-list__item">
+                <div class="skills-row">
+                  <div class="skills-row__title">Backend
+                    <ul class="skills-row__list">
+                      <li class="skills-row__item">
+                        <div class="skill">
+                          <svg class="skill__circle" width="130" height="130">
+                            <circle class="g-circles" r="45" cx="65" cy="65" stroke="#ccc" fill="none"></circle>
+                            <circle class="sector" r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)"></circle>
+                          </svg>
+                          <div class="skill__title">PHP</div>
+                        </div>
+                      </li>
+                      <li class="skills-row__item">
+                        <div class="skill">
+                          <svg class="skill__circle" width="130" height="130">
+                            <circle class="g-circles" r="45" cx="65" cy="65" stroke="#ccc" fill="none"></circle>
+                            <circle class="sector" r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)"></circle>
+                          </svg>
+                          <div class="skill__title">mySQL</div>
+                        </div>
+                      </li>
+                      <li class="skills-row__item">
+                        <div class="skill">
+                          <svg class="skill__circle" width="130" height="130">
+                            <circle class="g-circles" r="45" cx="65" cy="65" stroke="#ccc" fill="none"></circle>
+                            <circle class="sector" r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)"></circle>
+                          </svg>
+                          <div class="skill__title">Node.js & npm</div>
+                        </div>
+                      </li>
+                      <li class="skills-row__item">
+                        <div class="skill">
+                          <svg class="skill__circle" width="130" height="130">
+                            <circle class="g-circles" r="45" cx="65" cy="65" stroke="#ccc" fill="none"></circle>
+                            <circle class="sector" r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)"></circle>
+                          </svg>
+                          <div class="skill__title">Mongo.db</div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="skills-list__item">
+                <div class="skills-row">
+                  <div class="skills-row__title">WorkFlow
+                    <ul class="skills-row__list">
+                      <li class="skills-row__item">
+                        <div class="skill">
+                          <svg class="skill__circle" width="130" height="130">
+                            <circle class="g-circles" r="45" cx="65" cy="65" stroke="#ccc" fill="none"></circle>
+                            <circle class="sector" r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)"></circle>
+                          </svg>
+                          <div class="skill__title">Git</div>
+                        </div>
+                      </li>
+                      <li class="skills-row__item">
+                        <div class="skill">
+                          <svg class="skill__circle" width="130" height="130">
+                            <circle class="g-circles" r="45" cx="65" cy="65" stroke="#ccc" fill="none"></circle>
+                            <circle class="sector" r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)"></circle>
+                          </svg>
+                          <div class="skill__title">Gulp</div>
+                        </div>
+                      </li>
+                      <li class="skills-row__item">
+                        <div class="skill">
+                          <svg class="skill__circle" width="130" height="130">
+                            <circle class="g-circles" r="45" cx="65" cy="65" stroke="#ccc" fill="none"></circle>
+                            <circle class="sector" r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)"></circle>
+                          </svg>
+                          <div class="skill__title">Bower</div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section map">
+        <div class="google-map"><iframe width="100%" height="925" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=14&center=56.5010%2C84.9925&key=AIzaSyAeHlX_m_Llpc90URhMd9p3rUjatuzOsGY" allowfullscreen></iframe></div>
+        <div class="map__data">
+          <div class="contacts">
+            <div class="contacts__title">
+              <div class="block-smalltitle">Контакты</div>
+            </div>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <div class="contact-row">
+                  <div class="contact-row__icon"> 
+                    <svg class="contact-row__svg">
+                      <use xlink:href="assets/images/sprite/sprite.svg#skype"></use>
+                    </svg>
+                  </div>
+                  <div class="contact-row__content">kaj92</div>
+                </div>
+              </li>
+              <li class="contacts__item">
+                <div class="contact-row">
+                  <div class="contact-row__icon"> 
+                    <svg class="contact-row__svg">
+                      <use xlink:href="assets/images/sprite/sprite.svg#envelope"></use>
+                    </svg>
+                  </div>
+                  <div class="contact-row__content">kajl92@mail.ru</div>
+                </div>
+              </li>
+              <li class="contacts__item">
+                <div class="contact-row">
+                  <div class="contact-row__icon"> 
+                    <svg class="contact-row__svg">
+                      <use xlink:href="assets/images/sprite/sprite.svg#phone"></use>
+                    </svg>
+                  </div>
+                  <div class="contact-row__content">+7 913 841 66 13</div>
+                </div>
+              </li>
+              <li class="contacts__item">
+                <div class="contact-row">
+                  <div class="contact-row__icon"> 
+                    <svg class="contact-row__svg">
+                      <use xlink:href="assets/images/sprite/sprite.svg#map_marker"></use>
+                    </svg>
+                  </div>
+                  <div class="contact-row__content">Томск, ул. Алексея Беленца, д.11</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer__main">
+          <div class="footer__col">
+            <div class="footer-desc">
+              <div class="footer__desc-text">
+                <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer__col">
+            <div class="footer__menu">
+              <nav class="menu">
+                <ul class="menu__list">
+                  <li class="menu__item"><a class="menu__link" href="work.html">Мои работы</a></li>
+                  <li class="menu__item"><a class="menu__link" href="about.html">Обо мне</a></li>
+                  <li class="menu__item"><a class="menu__link" href="blog.html">Блог</a></li>
+                  <li class="menu__item"><a class="menu__link" href="index.html">Авторизация</a></li>
+                </ul>
+              </nav>
+            </div>
+                  <ul class="social">
+                    <li class="social__item"><a class="social__link" href="#">
+                        <svg class="social__svg">
+                          <use xlink:href="assets/images/sprite/sprite.svg#vk"></use>
+                        </svg></a></li>
+                    <li class="social__item"><a class="social__link" href="#">
+                        <svg class="social__svg">
+                          <use xlink:href="assets/images/sprite/sprite.svg#github"></use>
+                        </svg></a></li>
+                    <li class="social__item"><a class="social__link" href="#">
+                        <svg class="social__svg">
+                          <use xlink:href="assets/images/sprite/sprite.svg#in"></use>
+                        </svg></a></li>
+                  </ul>
+          </div>
+          <div class="footer__col">
+            <div class="footer-quote"> 
+              <div class="footer-quote__text">Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете. <span class="text-bold"> — Martin Golding</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copyright">© Максим Кайль | Создано с любовью в LoftSchool | 2017</div>
+      </footer>
+    </div>
     <script src="assets/scripts/bundle.js"></script>
   </body>
 </html>

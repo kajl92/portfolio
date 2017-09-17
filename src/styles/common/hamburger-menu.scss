@@ -1,12 +1,10 @@
-.nav__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.nav__link {
-  text-decoration: none;
-  font-size: 16px;
-  color: red;
-  ;
+.hamburger-top,
+.hamburger-center,
+.hamburger-bottom {
+  display: block;
+  height: 5px;
+  width: 40px;
+  border-radius: 2px;
+  background: #fff;
+  margin-bottom: 10px;
 }

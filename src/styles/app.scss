@@ -7,12 +7,14 @@ $d-green: #457935;
 @import './layout/normalize.scss';
 //fonts
 @import './common/fonts.scss';
+@import './common/hamburger-menu.scss';
+@import './common/footer.scss';
 //layout
 @import './layout/mixins.scss';
 @import './layout/layout.scss';
 
 // pages
-@import './pages/index.scss';
+// @import './pages/index.scss';
 @import './pages/blog.scss';
 @import './pages/about.scss';
 @import './pages/work.scss';

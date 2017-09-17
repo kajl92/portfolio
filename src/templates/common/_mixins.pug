@@ -1,0 +1,7 @@
+mixin social(className, iconName, modificator)
+  ul(class=`${className}`)
+    each item in iconName
+      li(class=`${className}__item`)
+        a(class=`${className}__link` href="#")
+          svg(class=`${className}__svg`)
+            use(xlink:href=`assets/images/sprite/sprite.svg#${item}`)

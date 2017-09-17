@@ -1,7 +1,166 @@
 extends ../template
+include ../common/_mixins.pug
 
 block variables
   - var title = 'Обо мне'
 
 block content
-  include ../common/hamburger-menu
+  section.section.head
+    .head__socials
+      +social('social', ["vk","github","in"])
+    .head__menu
+      .hamburger
+        a(href="#").hamburger__link
+          span.hamburger-top
+          span.hamburger-center
+          span.hamburger-bottom
+    .head__title
+      .section-title
+        svg.head-title__pic
+          use(xlink:href="assets/images/sprite/sprite.svg#portfolio_header")
+      .user.head__user
+        .user__pic
+          img(src="../assets/images/content/man1.jpg", alt="").user__avatar
+        .user__desc
+          .user__name Максим Кайль
+          .user__info Личный сайт веб разработчика
+    .head__scroll-arrow
+      a(href="#").arrow__down
+        svg.arrow__down-pic
+          use(xlink:href="assets/images/sprite/sprite.svg#arrow_down")
+  
+  section.section.about
+    .about__left
+      .about__triangle.about__triangle_left
+        svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 470 85" preserveAspectRatio="xMidYMin slice").triangle.triangle_fill_gray
+          polygon(points="0,0   0,86   470.8,86   470,82")
+      .about__left-title
+        svg.about__left-pic
+          use(xlink:href="assets/images/sprite/sprite.svg#about_header")
+        .block__title Обо мне
+      .about__left-content
+        .user-desc
+          .user-desc__img
+            img(src="assets/images/content/man1.jpg", alt="").user-desc__avatar
+          .user-desc__title
+            .block-smalltitle Кто я
+          .user-desc__text.text__style
+            p Я веб разработчик из Томска. Мне 25 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. 
+            <br>
+            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+    .about__right
+      .about__triangle.about__triangle_right
+        svg(xmlns:href="http://www.w3.org/2000/svg" viewbox="0 0 480 85" preserveAspectRatio="xMidYMin slice").triangle.triangle_fill_white
+          polygon(points="480,0   480,86   0,86   0,82")
+      .about__right-title
+        .block-smalltitle Чем я могу быть вам полезен
+      .about__right-desc.text__style
+        p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+      .about__right-content
+        ul.skills-list
+          li.skills-list__item
+            .skills-row
+              .skills-row__title Frontend
+                ul.skills-row__list
+                  li.skills-row__item
+                    .skill
+                      svg(width="130" height="130").skill__circle
+                        circle(r="45" cx="65" cy="65" stroke="#ccc"
+                        fill="none").g-circles
+                        circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
+                      .skill__title HTML5
+                  li.skills-row__item
+                    .skill
+                      svg(width="130" height="130").skill__circle
+                        circle(r="45" cx="65" cy="65" stroke="#ccc"
+                        fill="none").g-circles
+                        circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
+                      .skill__title CSS3
+                  li.skills-row__item
+                    .skill
+                      svg(width="130" height="130").skill__circle
+                        circle(r="45" cx="65" cy="65" stroke="#ccc"
+                        fill="none").g-circles
+                        circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
+                      .skill__title JavaScript & jQuery
+          li.skills-list__item
+            .skills-row
+              .skills-row__title Backend
+                ul.skills-row__list
+                  li.skills-row__item
+                    .skill
+                      svg(width="130" height="130").skill__circle
+                        circle(r="45" cx="65" cy="65" stroke="#ccc"
+                        fill="none").g-circles
+                        circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
+                      .skill__title PHP
+                  li.skills-row__item
+                    .skill
+                      svg(width="130" height="130").skill__circle
+                        circle(r="45" cx="65" cy="65" stroke="#ccc"
+                        fill="none").g-circles
+                        circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
+                      .skill__title mySQL
+                  li.skills-row__item
+                    .skill
+                      svg(width="130" height="130").skill__circle
+                        circle(r="45" cx="65" cy="65" stroke="#ccc"
+                        fill="none").g-circles
+                        circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
+                      .skill__title Node.js & npm
+                  li.skills-row__item
+                    .skill
+                      svg(width="130" height="130").skill__circle
+                        circle(r="45" cx="65" cy="65" stroke="#ccc"
+                        fill="none").g-circles
+                        circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
+                      .skill__title Mongo.db
+          li.skills-list__item
+            .skills-row
+              .skills-row__title WorkFlow
+                ul.skills-row__list
+                  li.skills-row__item
+                    .skill
+                      svg(width="130" height="130").skill__circle
+                        circle(r="45" cx="65" cy="65" stroke="#ccc"
+                        fill="none").g-circles
+                        circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
+                      .skill__title Git
+                  li.skills-row__item
+                    .skill
+                      svg(width="130" height="130").skill__circle
+                        circle(r="45" cx="65" cy="65" stroke="#ccc"
+                        fill="none").g-circles
+                        circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
+                      .skill__title Gulp
+                  li.skills-row__item
+                    .skill
+                      svg(width="130" height="130").skill__circle
+                        circle(r="45" cx="65" cy="65" stroke="#ccc"
+                        fill="none").g-circles
+                        circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
+                      .skill__title Bower
+
+  section.section.map
+    .google-map
+      <iframe width="100%" height="925" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=14&center=56.5010%2C84.9925&key=AIzaSyAeHlX_m_Llpc90URhMd9p3rUjatuzOsGY" allowfullscreen></iframe>
+    .map__data
+      .contacts
+        .contacts__title
+          .block-smalltitle Контакты
+        ul.contacts__list
+          -
+            var contacts = [
+              ['#skype', 'kaj92'],
+              ['#envelope', 'kajl92@mail.ru'],
+              ['#phone', '+7 913 841 66 13'],
+              ['#map_marker', 'Томск, ул. Алексея Беленца, д.11']
+            ]
+          each item in contacts
+            li.contacts__item
+              .contact-row
+                .contact-row__icon 
+                  svg.contact-row__svg
+                    use(xlink:href=`assets/images/sprite/sprite.svg${item[0]}`)
+                .contact-row__content #{item[1]}
+  include ../common/footer.pug
