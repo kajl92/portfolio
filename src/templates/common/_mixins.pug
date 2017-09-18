@@ -3,5 +3,11 @@ mixin social(className, iconName, modificator)
     each item in iconName
       li(class=`${className}__item`)
         a(class=`${className}__link` href="#")
-          svg(class=`${className}__svg`)
+          svg(class=`${className}__svg ${modificator}`)
             use(xlink:href=`assets/images/sprite/sprite.svg#${item}`)
+
+mixin sidebar(className, titleText)
+  ul(class=`${className}__list`)
+    each item in titleText
+      li(class=`${className}__item`)
+        a(class=`${className}__link` href='#')= item

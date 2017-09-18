@@ -50,7 +50,7 @@
 }
 
 .head-title__pic {
-  width: 98vw;
+  width: 80vw;
   height: 53vh;
   fill: #fff;
   fill-opacity: .12;
@@ -170,6 +170,7 @@
   @include sansus();
   font-size: 63px;
   text-transform: uppercase;
+  color: #373e42;
   text-align: center;
   &:after {
     content: '';

@@ -4,6 +4,7 @@ const gulp = require('gulp');
 const pug = require('gulp-pug');
 const del = require('del');
 const browserSync = require('browser-sync').create();
+const notify = require('gulp-notify');
 
 //styles
 const sass = require('gulp-sass');
@@ -62,13 +63,24 @@ function watch() {
   gulp.watch(paths.scripts.src, scripts);
 }
 
+// notyfi
+// function errors() {
+//   return gulp.src("src/*")
+//   .pipe(through(function () {
+//     this.emit("error", new Error("Something happend: Error message!"))
+//   })).on("error", notify.onError("Error: <%= error.message %>"));
+// }
+
 // pug
 function templates() {
   return gulp.src(paths.templates.pages)
     .pipe(pug({
       pretty: true
+    })).on('error', notify.onError({
+      message: "<%= error.message %>",
+      title: "Error!"
     }))
-    .pipe(gulp.dest(paths.root));
+    .pipe(gulp.dest(paths.root))
 }
 
 // scss
@@ -76,12 +88,16 @@ function styles() {
   return gulp.src('./src/styles/app.scss')
     .pipe(sourcemaps.init())
     // .pipe(sassGlob())
-    .pipe(sass())
+    .pipe(sass().on('error', notify.onError({
+      message: "<%= error.message %>",
+      title: "Scss Error!"
+    })))
     .pipe(sourcemaps.write())
     .pipe(rename({
       suffix: '.min'
     }))
     .pipe(gulp.dest(paths.styles.dest))
+    .pipe( notify( 'SCSS - хорошая работа!' ) );
 }
 
 //sprite svg

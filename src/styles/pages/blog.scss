@@ -1,0 +1,146 @@
+.block__title_color_white {
+  color: #fff;
+  &:after {
+    content: '';
+    margin: 0 auto 30px;
+    display: block;
+    width: 90px;
+    height: 3px;
+    background: #fff;
+  }
+}
+
+.head-title__pic_position {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: inherit;
+  height: 25vh;
+}
+
+.tiangle {
+  position: absolute;
+  bottom: -1%;
+  min-width: 100%;
+}
+
+.container {
+  min-width: 100%;
+  height: 100%;
+  background: #faf8f0;
+}
+
+.blog {
+  padding-top: 71px;
+  display: flex;
+}
+
+.blog__left {
+  width: 25%;
+}
+
+.blog__sidebar {
+  margin-left: 44px;
+}
+
+.sidebar-blog {
+  text-align: right;
+}
+
+.sidebar-blog__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 33px;
+  position: relative; 
+}
+
+.sidebar-blog__link {
+  @include roboto(regular);
+  color: #566358;
+  text-decoration: none;
+}
+
+.active {
+  @include roboto(bold);
+  color: $green;
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 108%;
+    transform: translate(-50%,-50%);
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 42px;
+    background: $green;
+  }
+}
+
+.blog__right {
+  width: 75%;
+}
+
+.traingle_blog {
+  fill: #faf8f0;
+}
+
+.articles {
+  margin: 0 auto;
+  width: 76%;
+}
+
+.articles__item {
+  border-bottom: 5px solid #ecebe4;
+  padding-bottom: 70px;
+  margin-bottom: 70px;
+  &:last-child {
+    padding-bottom: 0;
+    margin-bottom: 65px;
+    border-bottom: none;
+  }
+}
+
+.article__title {
+  @include sansus;
+  font-size: 35px;
+  color: #566358;
+  margin-bottom: 20px;
+}
+
+.article__data {
+  @include roboto(regular);
+  color: #4e8839;
+  opacity: .7;
+  margin-bottom: 22px;
+}
+
+.article__content {
+  @include roboto(regular);
+  color: #566358;
+}
+
+.article__content-parag {
+  margin-bottom: 20px;
+}
+
+.article__content-img {
+  max-width: 100%;
+}
+
+.article__content-pic {
+  width: 100%;
+}
+
+.footer_position {
+  position: inherit;
+}
+
+.social_fill {
+  fill-opacity: .5;
+  &:hover {
+    fill: #fff;
+    fill-opacity: inherit;
+  }
+}

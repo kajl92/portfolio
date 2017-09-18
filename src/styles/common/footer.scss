@@ -57,7 +57,7 @@
     transition: .3s;
   }
   &:hover:after {
-    width: 30px;
+    width: 100%;
     background: #fff;
   }
 }
@@ -68,7 +68,8 @@
 
 .footer-quote__text {
   @include roboto(lightitalic);
-  color: rgba(#fff, .5)
+  color: #fff;
+  opacity: .7;
 }
 
 .text-bold {

@@ -8,12 +8,7 @@ block content
   section.section.head
     .head__socials
       +social('social', ["vk","github","in"])
-    .head__menu
-      .hamburger
-        a(href="#").hamburger__link
-          span.hamburger-top
-          span.hamburger-center
-          span.hamburger-bottom
+    include ../common/hamburger-menu.pug
     .head__title
       .section-title
         svg.head-title__pic
