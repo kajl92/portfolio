@@ -17,8 +17,8 @@ block content
         .user__pic
           img(src="../assets/images/content/man1.jpg", alt="").user__avatar
         .user__desc
-          .block__title.block__title_color_white Блог
-          .user__info Статьи, которые я написал
+          .user__name Максим Кайль
+          .user__info Личный сайт веб разработчика
     .head__scroll-arrow
       a(href="#").arrow__down
         svg.arrow__down-pic
@@ -27,15 +27,83 @@ block content
       svg(class="traingle_blog" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 85" preserveAspectRatio="none")
         polygon(class="left" points="0,0   0,86   500.8,86   500.8,75.5")
         polygon(class="right" points="1000,0   1000,86   500,86   500,75.5")
+
   section.section.works
     .works__head
-      .works__title Мои работы
+      .block__title Мои работы
       .works__bg
         svg.works__pic
           use(xlink:href="assets/images/sprite/sprite.svg#works_header")
-    .works__slide
-      .slider
-        .slider-desc
-        ul.slider-desc__list
-          li.lider-desc__item
-  include ../common/footer.pug  
+    .slider
+      .slider-info
+        ul.slider-info__list
+          li.slider-info__item
+            .slider-info__title
+              .block-smalltitle Сайт школы онлайн Образования
+            .slider-info__techno HTML , CSS, JAVASCRIPT
+            .slider-info__btn
+              a(href="#").slider-info__link Посмотреть сайт
+                svg.slider-info__pic
+                  use(xlink:href="assets/images/sprite/sprite.svg#link")
+      .slider-top
+        ul.slider-top__list
+          li.slider-top__item
+            .slider-photo
+              img(src="assets/images/content/site1.png",alt="").slider-photo__pic
+      .slider-btns
+        .slider-btn__left
+          a(href="#").slider-btn__link
+            svg.slider-btn.slider-btn__prew
+              use(xlink:href="assets/images/sprite/sprite.svg#arrow_down")
+          .slider-photo
+              img(src="assets/images/content/site1.png",alt="").slider-photo__pic.slider-photo__pic_opacity
+        .slider-btn__right
+          a(href="#").slider-btn__link
+            svg.slider-btn.slider-btn__next
+              use(xlink:href="assets/images/sprite/sprite.svg#arrow_down")
+          .slider-photo
+              img(src="assets/images/content/site1.png",alt="").slider-photo__pic.slider-photo__pic_opacity
+
+  section.section.reviews
+    .works__head.reviews__head
+      .block__title Что обо мне говорят
+      .works__bg
+        svg.works__pic
+          use(xlink:href="assets/images/sprite/sprite.svg#about_header")
+    ul.reviews__list
+      li.reviews__item
+        .reviews__quotes
+          img(src="assets/images/bg/quotes.png", alt="").reviews__quotes-pic
+        .reviews__avatar
+          .reviews__avatar-pic
+            img(src="assets/images/content/teacher1.jpg", alt="").reviews__avatar-img
+        .reviews__text
+          p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 3 месяца только самых тяжелых испытаний и бессонных ночей!
+        .reviews__info <span class="reviews__name"> Ковальчук Дмитрий </span> - основатель школы Loftschool
+      li.reviews__item
+        .reviews__quotes
+          img(src="assets/images/bg/quotes.png", alt="").reviews__quotes-pic
+        .reviews__avatar
+          .reviews__avatar-pic
+            img(src="assets/images/content/teacher.jpg", alt="").reviews__avatar-img
+        .reviews__text
+          p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+        .reviews__info <span class="reviews__name"> Сабанцев Владимир </span> - преподаватель
+    .block-form
+      .form-wrap
+        .block-smalltitle.form__title Связаться со мной
+        form(action="", method="post").form
+          .form__contact
+            input(type="text", id="name" placeholder="Имя").form__input
+          .form__contact
+            input(type="text", id="name" placeholder="Email").form__input
+          .form__contact
+            textarea(type="text", id="name" placeholder="Ваше сообщение").form__textarea
+          .form__btns
+            input(type="submit", value="Отправить" name="message").form__btn.form__btn_border-radius_left
+            input(type="reset", value="Очистить" name="message").form__btn.form__btn_border-radius_right
+    .bottom__scroll-arrow
+      a(href="#").arrow__up
+        svg.arrow__down-pic
+          use(xlink:href="assets/images/sprite/sprite.svg#arrow_down")
+    +footer('footer__works')

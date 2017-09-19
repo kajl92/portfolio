@@ -6,7 +6,7 @@
 }
 
 .welcome__user {
-  width: rem(375px);
+  width: rem(380px);
   height: rem(350px);
   position: absolute;
   top: 50%;
@@ -23,6 +23,7 @@
 .nav {
   position: absolute;
   top: 100%;
+  width: 100%;
 }
 
 .nav__list {
@@ -32,11 +33,13 @@
 }
 
 .nav__item {
+  width: 100%;
   background: $w-green;
-  padding: rem(13px) rem(30px);
+  padding: rem(13px) 0;
   border-right: rem(2px) solid rgba(#fff, .5);
   cursor: pointer;
   transition: .3s;
+  flex: 1;
   &:last-child {
     border-right: none;
   }
