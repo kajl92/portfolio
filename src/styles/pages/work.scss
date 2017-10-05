@@ -105,7 +105,7 @@
   display: flex;
 }
 
-.slider-btn__left {
+.slider-btns__left {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,7 +122,10 @@
   width: 50%;
   background: #aeb2aa;
 }
-.slider-btn__link{
+.slider-button{
+  background: transparent;
+  border: none;
+  cursor: pointer;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -139,7 +142,7 @@
   transform: rotate(180deg);
 }
 
-.works__bg {
+.block-title__bg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -179,12 +182,16 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin-bottom: 65px;
 }
 
 .reviews__item {
   position: relative;
   width: 50%;
-  margin-bottom: 65px;
+}
+
+.feedback {
+  margin: 0;
 }
 
 .reviews__quotes {
@@ -229,7 +236,7 @@
   color: $green;
 }
 
-.block-form {
+.block-form  {
   max-width: 380px;
   margin: 0 auto 156px;
 }
@@ -248,6 +255,17 @@
 .form__contact {
   text-align: center;
   margin-bottom: 20px;
+}
+
+.visuallyHidden {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
 }
 
 .form__input {
@@ -310,6 +328,12 @@
   bottom: 19%;
   left: 50%;
   transform: rotate(180deg);
+}
+
+.arrow__up, .arrow__down {
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .footer__works {

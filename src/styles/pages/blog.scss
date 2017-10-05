@@ -1,4 +1,4 @@
-.block__title_color_white {
+.block-title_color_white {
   color: #fff;
   &:after {
     content: '';
@@ -113,16 +113,12 @@
   @include roboto(regular);
   color: #4e8839;
   opacity: .7;
-  margin-bottom: 22px;
 }
 
 .article__content {
   @include roboto(regular);
   color: #566358;
-}
-
-.article__content-parag {
-  margin-bottom: 20px;
+  margin-top: 22px;
 }
 
 .article__content-img {

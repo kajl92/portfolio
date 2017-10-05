@@ -56,7 +56,7 @@
     height: 3px;
     transition: .3s;
   }
-  &:hover:after {
+  &:focus:after {
     width: 100%;
     background: #fff;
   }

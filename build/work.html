@@ -27,7 +27,9 @@
           </ul>
         </div>
         <div class="head__menu">
-          <div class="hamburger"><a class="hamburger__link" href="#"><span class="hamburger-top"></span><span class="hamburger-center"></span><span class="hamburger-bottom"></span></a></div>
+          <div class="hamburger">
+            <button class="hamburger__btn"><span class="hamburger-top"></span><span class="hamburger-center"></span><span class="hamburger-bottom"></span></button>
+          </div>
         </div>
         <div class="head__title">
           <div class="section-title">
@@ -43,10 +45,13 @@
             </div>
           </div>
         </div>
-        <div class="head__scroll-arrow"><a class="arrow__down" href="#">
+        <div class="head__scroll-arrow">
+          <button class="arrow__down">
             <svg class="arrow__down-pic">
               <use xlink:href="assets/images/sprite/sprite.svg#arrow_down"></use>
-            </svg></a></div>
+            </svg>
+          </button>
+        </div>
         <div class="tiangle">
           <svg class="traingle_blog" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 85" preserveAspectRatio="none">
             <polygon class="left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
@@ -56,19 +61,20 @@
       </section>
       <section class="section works">
         <div class="works__head">
-          <div class="block__title">Мои работы</div>
-          <div class="works__bg">
-            <svg class="works__pic">
-              <use xlink:href="assets/images/sprite/sprite.svg#works_header"></use>
-            </svg>
-          </div>
+          <h1 class="block-title">Мои работы
+            <div class="block-title__bg">
+              <svg class="works__pic">
+                <use xlink:href="assets/images/sprite/sprite.svg#works_header"></use>
+              </svg>
+            </div>
+          </h1>
         </div>
         <div class="slider">
           <div class="slider-info">
             <ul class="slider-info__list">
               <li class="slider-info__item">
                 <div class="slider-info__title">
-                  <div class="block-smalltitle">Сайт школы онлайн Образования</div>
+                  <h2 class="block-smalltitle">Сайт школы онлайн Образования</h2>
                 </div>
                 <div class="slider-info__techno">HTML , CSS, JAVASCRIPT</div>
                 <div class="slider-info__btn"><a class="slider-info__link" href="#">Посмотреть сайт
@@ -86,16 +92,20 @@
             </ul>
           </div>
           <div class="slider-btns">
-            <div class="slider-btn__left"><a class="slider-btn__link" href="#">
+            <div class="slider-btns__left">
+              <button class="slider-button">
                 <svg class="slider-btn slider-btn__prew">
                   <use xlink:href="assets/images/sprite/sprite.svg#arrow_down"></use>
-                </svg></a>
+                </svg>
+              </button>
               <div class="slider-photo"><img class="slider-photo__pic slider-photo__pic_opacity" src="assets/images/content/site1.png" alt=""></div>
             </div>
-            <div class="slider-btn__right"><a class="slider-btn__link" href="#">
+            <div class="slider-btn__right">
+              <button class="slider-button">
                 <svg class="slider-btn slider-btn__next">
                   <use xlink:href="assets/images/sprite/sprite.svg#arrow_down"></use>
-                </svg></a>
+                </svg>
+              </button>
               <div class="slider-photo"><img class="slider-photo__pic slider-photo__pic_opacity" src="assets/images/content/site1.png" alt=""></div>
             </div>
           </div>
@@ -103,59 +113,69 @@
       </section>
       <section class="section reviews">
         <div class="works__head reviews__head">
-          <div class="block__title">Что обо мне говорят</div>
-          <div class="works__bg">
-            <svg class="works__pic">
-              <use xlink:href="assets/images/sprite/sprite.svg#about_header"></use>
-            </svg>
-          </div>
+          <h2 class="block-title">Что обо мне говорят
+            <div class="block-title__bg">
+              <svg class="works__pic">
+                <use xlink:href="assets/images/sprite/sprite.svg#about_header"></use>
+              </svg>
+            </div>
+          </h2>
         </div>
         <ul class="reviews__list">
           <li class="reviews__item">
-            <div class="reviews__quotes"><img class="reviews__quotes-pic" src="assets/images/bg/quotes.png" alt=""></div>
-            <div class="reviews__avatar">
-              <div class="reviews__avatar-pic"><img class="reviews__avatar-img" src="assets/images/content/teacher1.jpg" alt=""></div>
-            </div>
-            <div class="reviews__text">
-              <p>Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 3 месяца только самых тяжелых испытаний и бессонных ночей!</p>
-            </div>
-            <div class="reviews__info"><span class="reviews__name"> Ковальчук Дмитрий </span> - основатель школы Loftschool</div>
+            <blockquote class="feedback">
+              <div class="reviews__quotes"><img class="reviews__quotes-pic" src="assets/images/bg/quotes.png" alt=""></div>
+              <div class="reviews__avatar">
+                <div class="reviews__avatar-pic"><img class="reviews__avatar-img" src="assets/images/content/teacher1.jpg" alt=""></div>
+              </div>
+              <div class="reviews__text">
+                <p>Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 3 месяца только самых тяжелых испытаний и бессонных ночей!</p>
+              </div>
+              <div class="reviews__info"><cite class="reviews__name"> Ковальчук Дмитрий </cite> - основатель школы Loftschool</div>
+            </blockquote>
           </li>
           <li class="reviews__item">
-            <div class="reviews__quotes"><img class="reviews__quotes-pic" src="assets/images/bg/quotes.png" alt=""></div>
-            <div class="reviews__avatar">
-              <div class="reviews__avatar-pic"><img class="reviews__avatar-img" src="assets/images/content/teacher.jpg" alt=""></div>
-            </div>
-            <div class="reviews__text">
-              <p>Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!</p>
-            </div>
-            <div class="reviews__info"><span class="reviews__name"> Сабанцев Владимир </span> - преподаватель</div>
+            <blockquote class="feedback">
+              <div class="reviews__quotes"><img class="reviews__quotes-pic" src="assets/images/bg/quotes.png" alt=""></div>
+              <div class="reviews__avatar">
+                <div class="reviews__avatar-pic"><img class="reviews__avatar-img" src="assets/images/content/teacher.jpg" alt=""></div>
+              </div>
+              <div class="reviews__text">
+                <p>Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!</p>
+              </div>
+              <div class="reviews__info"><cite class="reviews__name"> Сабанцев Владимир </cite> - преподаватель</div>
+            </blockquote>
           </li>
         </ul>
         <div class="block-form">
           <div class="form-wrap">
-            <div class="block-smalltitle form__title">Связаться со мной</div>
+            <h2 class="block-smalltitle form__title">Связаться со мной</h2>
             <form class="form" action="" method="post">
               <div class="form__contact">
+                <label class="visuallyHidden" for="name"></label>
                 <input class="form__input" type="text" id="name" placeholder="Имя">
               </div>
               <div class="form__contact">
-                <input class="form__input" type="text" id="name" placeholder="Email">
+                <label class="visuallyHidden" for="email"></label>
+                <input class="form__input" type="text" id="email" placeholder="Email">
               </div>
               <div class="form__contact">
-                <textarea class="form__textarea" type="text" id="name" placeholder="Ваше сообщение"></textarea>
+                <textarea class="form__textarea" type="text" id="comment" placeholder="Ваше сообщение"></textarea>
               </div>
               <div class="form__btns">
-                <input class="form__btn form__btn_border-radius_left" type="submit" value="Отправить" name="message">
-                <input class="form__btn form__btn_border-radius_right" type="reset" value="Очистить" name="message">
+                <button class="form__btn form__btn_border-radius_left" type="submit">Отправить</button>
+                <button class="form__btn form__btn_border-radius_right" type="reset">Очистить</button>
               </div>
             </form>
           </div>
         </div>
-        <div class="bottom__scroll-arrow"><a class="arrow__up" href="#">
+        <div class="bottom__scroll-arrow">
+          <button class="arrow__up">
             <svg class="arrow__down-pic">
               <use xlink:href="assets/images/sprite/sprite.svg#arrow_down"></use>
-            </svg></a></div>
+            </svg>
+          </button>
+        </div>
         <footer class="footer footer__works">
           <div class="footer__main">
             <div class="footer__col">

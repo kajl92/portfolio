@@ -60,13 +60,12 @@
   right: rem(100px);
   @include roboto(medium);
   color: #fff;
-  text-decoration: none;
-  display: inline-block;
   border: rem(1px) solid #fff;
   border-radius: rem(20px);
   padding: rem(10px) rem(27px);
   cursor: pointer;
   transition: .3s;
+  background: transparent;
   &:hover{
     border: rem(1px) solid #729e19;
     background: $green;

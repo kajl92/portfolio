@@ -28,27 +28,26 @@ block content
     .about__left
       .about__triangle.about__triangle_left
         svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 470 85" preserveAspectRatio="xMidYMin slice").triangle.triangle_fill_gray
-          polygon(points="0,0   0,86   470.8,86   470,82")
+          polygon(points="0,0 0,86 470.8,86 470,82")
       .about__left-title
         svg.about__left-pic
           use(xlink:href="assets/images/sprite/sprite.svg#about_header")
-        .block__title Обо мне
+        h1.block__title Обо мне
       .about__left-content
         .user-desc
           .user-desc__img
             img(src="assets/images/content/man1.jpg", alt="").user-desc__avatar
           .user-desc__title
-            .block-smalltitle Кто я
+            h2.block-smalltitle Кто я
           .user-desc__text.text__style
             p Я веб разработчик из Томска. Мне 25 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. 
-            <br>
             p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
     .about__right
       .about__triangle.about__triangle_right
         svg(xmlns:href="http://www.w3.org/2000/svg" viewbox="0 0 480 85" preserveAspectRatio="xMidYMin slice").triangle.triangle_fill_white
           polygon(points="480,0   480,86   0,86   0,82")
       .about__right-title
-        .block-smalltitle Чем я могу быть вам полезен
+        h2.block-smalltitle Чем я могу быть вам полезен
       .about__right-desc.text__style
         p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
       .about__right-content
@@ -142,7 +141,7 @@ block content
     .map__data
       .contacts
         .contacts__title
-          .block-smalltitle Контакты
+          h2.block-smalltitle Контакты
         ul.contacts__list
           -
             var contacts = [

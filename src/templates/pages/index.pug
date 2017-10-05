@@ -10,8 +10,8 @@ block content
         .user__pic
           img(src="../assets/images/content/man1.jpg", alt="").user__avatar
         .user__desc
-          .user__name Максим Кайль
-          .user__info.user__info_padding Личный сайт веб разработчика
+          h1.user__name Максим Кайль
+          h2.user__info.user__info_padding Личный сайт веб разработчика
         +social('social', ["vk","github","in"])
         nav.nav
           ul.nav__list
@@ -21,5 +21,5 @@ block content
               a.nav__link(href="./about.html") Обо мне
             li.nav__item
               a.nav__link(href="./blog.html") Блог
-      a.authorization-btn(href="#") Авторизоваться
+      button.authorization-btn Авторизоваться
       .copyright © Максим Кайль | Создано с любовью в LoftSchool | 2017

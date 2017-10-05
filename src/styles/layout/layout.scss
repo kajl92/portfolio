@@ -1,5 +1,6 @@
-body, html {
-	height: 100%;
+body,
+html {
+  height: 100%;
 }
 
 body {
@@ -14,8 +15,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
-  font-weight: normal;
+  margin: 0;
 }
 
 table {
@@ -34,6 +34,10 @@ ul {
 p {
   padding: 0;
   margin: 0;
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 footer {
@@ -42,7 +46,7 @@ footer {
 }
 
 .wrapper {
-  min-height: 100%; 
+  min-height: 100%;
   position: relative;
 }
 
