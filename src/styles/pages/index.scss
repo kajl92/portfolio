@@ -43,7 +43,13 @@
   &:last-child {
     border-right: none;
   }
-  &:hover{
+  &:hover {
+    background: $d-green;
+  }
+  &:focus {
+    background: $d-green;
+  }
+  &:active {
     background: $d-green;
   }
 }
@@ -66,10 +72,17 @@
   cursor: pointer;
   transition: .3s;
   background: transparent;
-  &:hover{
+  &:hover {
     border: rem(1px) solid #729e19;
     background: $green;
-
+  }
+  &:focus {
+    border: rem(1px) solid #729e19;
+    background: $green;
+  }
+  &:active {
+    border: rem(1px) solid #729e19;
+    background: $green;
   }
 }
 

@@ -34,6 +34,12 @@
   &:hover {
     fill: $green;
   }
+  &:focus {
+    fill: $green;
+  }
+  &:active {
+    fill: $green;
+  }
 }
 
 .head__menu {
@@ -113,6 +119,10 @@
   fill-opacity: .70;
   transition: .3s;
   &:hover {
+    transform: translateY(20%);
+    fill-opacity: inherit;
+  }
+  &:focus {
     transform: translateY(20%);
     fill-opacity: inherit;
   }

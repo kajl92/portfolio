@@ -15,7 +15,7 @@ block content
           use(xlink:href="assets/images/sprite/sprite.svg#portfolio_header")
       .user.head__user
         .user__pic
-          img(src="../assets/images/content/man1.jpg", alt="").user__avatar
+          img(src="assets/images/content/man1.jpg", alt="").user__avatar
         .user__desc
           .user__name Максим Кайль
           .user__info Личный сайт веб разработчика
@@ -96,10 +96,10 @@ block content
         h2.block-smalltitle.form__title Связаться со мной
         form(action="", method="post").form
           .form__contact
-            label(for="name").visuallyHidden
+            label(for="name").visuallyHidden Введите имя
             input(type="text", id="name" placeholder="Имя").form__input
           .form__contact
-            label(for="email").visuallyHidden
+            label(for="email").visuallyHidden Ввидите email
             input(type="text", id="email" placeholder="Email").form__input
           .form__contact
             textarea(type="text", id="comment" placeholder="Ваше сообщение").form__textarea
