@@ -79,16 +79,12 @@
 }
 
 .blog__right {
-  width: 75%;
+  margin: 0 auto;
+  width: 55%;
 }
 
 .traingle_blog {
   fill: #faf8f0;
-}
-
-.articles {
-  margin: 0 auto;
-  width: 76%;
 }
 
 .articles__item {
@@ -136,6 +132,14 @@
 .social_fill {
   fill-opacity: .5;
   &:hover {
+    fill: #fff;
+    fill-opacity: inherit;
+  }
+  &:focus {
+    fill: #fff;
+    fill-opacity: inherit;
+  }
+  &:active {
     fill: #fff;
     fill-opacity: inherit;
   }
