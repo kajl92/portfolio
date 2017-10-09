@@ -186,7 +186,6 @@
 .reviews__list {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
   margin-bottom: 65px;
 }
@@ -241,93 +240,6 @@
   @include roboto(bolditalic);
   color: $green;
 }
-
-.block-form  {
-  max-width: 380px;
-  margin: 0 auto 156px;
-}
-
-.form-wrap {
-  background: rgba(#e0e0dc, .6);
-  padding: 35px 20px;
-  border-radius: 10px;
-  position: relative;
-}
-
-.form__title {
-  margin-bottom: 30px;
-}
-
-.form__contact {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.visuallyHidden {
-	position: absolute;
-	overflow: hidden;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	width: 1px;
-	margin: -1px;
-	padding: 0;
-	border: 0;
-}
-
-.form__input {
-  width: 340px;
-  outline: none;
-  border: none;
-  border-radius: 40px;
-  padding: 15px 20px;
-}
-
-.form__textarea {
-  padding: 15px;
-  resize: none;
-  width: 340px;
-  height: 140px;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-}
-
-.form__btns {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
-.form__btn {
-  flex: 1;
-  width: 50%;
-  outline: none;
-  cursor: pointer;
-  background: #7da66d;
-  @include roboto(medium);
-  color: #fff;
-  padding: 15px 0;
-  border: none;
-  border-right: 2px solid rgba(#dee3e7, .5);
-  transition: .3s;
-  &:hover {
-    background: $green;
-  }
-  &:focus{
-    background: $green;
-  }
-}
-
-.form__btn_border-radius_left {
-  border-radius: 0 0 0 5px;
-}
-
-.form__btn_border-radius_right {
-  border-radius: 0 0 5px 0;
-}
-
 
 .bottom__scroll-arrow {
   position: absolute;

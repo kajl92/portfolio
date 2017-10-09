@@ -13,6 +13,9 @@
 
 .social {
   display: flex;
+  @include phones {
+    justify-content: center;
+  }
 }
 
 .social__item {
@@ -40,6 +43,10 @@
   &:active {
     fill: $green;
   }
+  @include phones {
+    width: 21px;
+    height: 17px;
+  }
 }
 
 .head__menu {
@@ -60,14 +67,9 @@
   height: 53vh;
   fill: #fff;
   fill-opacity: .12;
-}
-
-.user {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include phones {
+    height: inherit;
+  }
 }
 
 .head__user {
@@ -97,11 +99,17 @@
   @include roboto(medium);
   font-size: 35px;
   color: #fff;
+  @include phones {
+    font-size: 20px;
+  }
 }
 
 .user__info {
   @include roboto(regular);
   color: #fff;
+  @include phones {
+    font-size: 14px;
+  }
 }
 
 .head__scroll-arrow {
@@ -131,22 +139,33 @@
 .about {
   display: flex;
   position: relative;
+  @include tablets {
+    position: inherit;
+    display: block;
+  }
 }
 
 .about__left {
-  flex: 1;
+  min-width: 50%;
   background: #ebefe2;
+  @include tablets {
+    position: relative;
+  }
 }
 
 .about__right {
-  flex: 1;
+  min-width: 50%;
   background: #f4f5f0;
+  @include tablets {
+    padding-top: 45px;
+  }
 }
 
 .about__triangle {
   position: absolute;
-  bottom: 99%;
-  width: 50%;
+  bottom: 100%;
+  width: 100%;
+  display: grid;
 }
 
 .triangle_fill_gray {
@@ -155,6 +174,9 @@
 
 .triangle_fill_white {
   fill: #f4f5f0;
+  @include tablets {
+    fill: #ebefe2;
+  }
 }
 
 .about__left-title {
@@ -173,7 +195,6 @@
   fill: #93c42e;
   width: 50%;
   fill-opacity: .10;
-
 }
 
 .block-title {
@@ -189,6 +210,15 @@
     width: 90px;
     height: 3px;
     background: #373e42;
+    @include phones {
+      width: 51px;
+    }
+  }
+  @include tablets {
+    font-size: 49px;
+  }
+  @include phones {
+    font-size: 35px;
   }
 }
 
@@ -200,20 +230,18 @@
 }
 
 .user-desc__img {
-  width: 443px;
-  height: 390px;
-  border-radius: 5px;
-  overflow: hidden;
-  position: relative;
+  min-width: 100%;
+  text-align: center;
   margin-bottom: 35px;
 }
 
 .user-desc__avatar {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  width: 65%;
+  @include phones {
+    width: 98%;
+  }
 }
 
 .user-desc__title {
@@ -234,12 +262,27 @@
     width: 90px;
     height: 3px;
     background: #373e42;
+    @include phones {
+      width: 54px;
+    }
+  }
+  @include tablets {
+    font-size: 30px;
+  }
+  @include phones {
+    font-size: 21px;
   }
 }
 
 .user-desc__text {
   width: 56%;
   margin-bottom: 25px;
+  @include tablets {
+    width: 62%;
+  }
+  @include phones {
+    width: 98%;
+  }
 }
 
 .text__style {
@@ -254,29 +297,70 @@
   text-align: center;
   align-items: center;
   justify-content: center;
+  @include tablets {
+    width: 36%;
+    margin: 0 auto 20px;
+  }
+  @include phones {
+    width: 60%;
+  }
 }
 
 .about__right-desc {
   margin: 0 40px 50px;
+  @include tablets {
+    width: 63%;
+    margin: 0 auto 45px;
+  }
+  @include phones {
+    width: 98%;
+  }
 }
 
 .skills-list {
-  padding: 0 40px;
+  margin: 0 40px;
 }
 
 .skills-row__title {
   @include roboto(medium);
   font-size: 28px;
   color: #566358;
+  @include tablets {
+    text-align: center;
+    font-size: 20px;
+  }
 }
 
 .skills-row__item {
   position: relative;
+  @include tablets {
+    margin-right: 20px;
+  }
+  @include phones {
+    margin-right: 0;
+    width: 50%;
+  }
 }
 
 .skills-row__list {
   display: flex;
+  text-align: center;
+  @include tablets {
+    justify-content: center;
+  }
+  @include phones {
+    flex-wrap: wrap;
+  }
+}
+
+.skills-list__item {
   margin-bottom: 15px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include tablets {
+    margin-bottom: 29px;
+  }
 }
 
 .skill__title {
@@ -285,13 +369,14 @@
   position: absolute;
   top: 48%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 .skill__circle {
   position: relative;
+  max-width: 100%;
+  
 }
-
 
 .g-circles {
   fill: none;
@@ -320,6 +405,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @include tablets {
+    top: 40%;
+  }
+  @include phones {
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: inherit;
+  }
 }
 
 .contacts {
@@ -334,6 +428,9 @@
 
 .contacts__item {
   margin-bottom: 25px;
+  @include phones {
+    margin-bottom: 14px;
+  }
   &:last-child {
     margin-bottom: 0;
   }

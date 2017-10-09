@@ -10,37 +10,54 @@
   <body>
     <div class="wrapper">
       <section class="welcome">
-        <div class="user welcome__user">
-          <div class="user__pic"><img class="user__avatar" src="assets/images/content/man1.jpg" alt=""></div>
-          <div class="user__desc">
-            <h1 class="user__name">Максим Кайль</h1>
-            <h2 class="user__info user__info_padding">Личный сайт веб разработчика</h2>
+        <div class="user user__auth">
+          <div class="user__auth-form">
+            <div class="user__auth-title">
+              <h2 class="block-smalltitle">Авторизуйтесь</h2>
+            </div>
+            <form class="form" action="" method="post">
+              <div class="form__contact">
+                <label class="visuallyHidden" for="name">Введите логин</label>
+                <input class="form__input form__input_width" type="text" id="name" placeholder="Логин">
+              </div>
+              <div class="form__contact">
+                <label class="visuallyHidden" for="email">Ввидите пароль</label>
+                <input class="form__input form__input_width" type="text" id="email" placeholder="Пароль">
+              </div>
+              <div class="form__human">
+                <label class="form__human-checkbox">
+                  <input class="form__checkbox" type="checkbox" name="human" id="human" value="I human">
+                  <div class="form__human-checkbox__fake"></div>
+                  <div class="form__human-checkbox__text">Я человек</div>
+                </label>
+              </div>
+              <div class="form__radio">
+                <div class="form__radio-wrapp">
+                  <div class="form__redio-title">Вы точно не робот?</div>
+                </div>
+                <div class="form__radio-row">
+                  <label class="form__radio-btns">
+                    <input class="form__radio-elem" type="radio" name="robot" value="Да">
+                    <div class="form__radio-fake"></div>
+                    <div class="form__radio-text">Да</div>
+                  </label>
+                  <label class="form__radio-btns">
+                    <input class="form__radio-elem" type="radio" name="robot" value="Не уверен">
+                    <div class="form__radio-fake"></div>
+                    <div class="form__radio-text">Не уверен</div>
+                  </label>
+                </div>
+              </div>
+              <div class="form__btns form__btns_position">
+                <button class="form__btn form__btn_border-radius_left" type="reset">На главную</button>
+                <button class="form__btn form__btn_border-radius_right">Войти</button>
+              </div>
+            </form>
           </div>
-          <ul class="social">
-            <li class="social__item"><a class="social__link" href="#">
-                <svg class="social__svg undefined">
-                  <use xlink:href="assets/images/sprite/sprite.svg#vk"></use>
-                </svg></a></li>
-            <li class="social__item"><a class="social__link" href="#">
-                <svg class="social__svg undefined">
-                  <use xlink:href="assets/images/sprite/sprite.svg#github"></use>
-                </svg></a></li>
-            <li class="social__item"><a class="social__link" href="#">
-                <svg class="social__svg undefined">
-                  <use xlink:href="assets/images/sprite/sprite.svg#in"></use>
-                </svg></a></li>
-          </ul>
-          <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__item"><a class="nav__link" href="./work.html">Мои работы</a></li>
-              <li class="nav__item"><a class="nav__link" href="./about.html">Обо мне</a></li>
-              <li class="nav__item"><a class="nav__link" href="./blog.html">Блог</a></li>
-            </ul>
-          </nav>
         </div>
-        <button class="authorization-btn">Авторизоваться</button>
-        <div class="copyright">© Максим Кайль | Создано с любовью в LoftSchool | 2017</div>
       </section>
+      <button class="authorization-btn">Авторизоваться</button>
+      <div class="copyright">© Максим Кайль | Создано с любовью в LoftSchool | 2017</div>
     </div>
     <script src="assets/scripts/bundle.js"></script>
   </body>

@@ -40,6 +40,10 @@ const paths = {
     scr: 'src/img/icons/*.svg',
     dest: 'build/assets/images/sprite'
   },
+  svgCopy: {
+    src: 'src/img/icons/*.svg',
+    dest: 'build/assets/images/sprite'
+  },
   images: {
     src: 'src/img/**/*.*',
     dest: 'build/assets/images'
@@ -59,17 +63,10 @@ function watch() {
   gulp.watch(paths.styles.src, styles);
   gulp.watch(paths.templates.src, templates);
   gulp.watch(paths.images.src, images);
+  gulp.watch(paths.svgCopy.src, svgCopy);
   gulp.watch(paths.fonts.src, fonts);
   gulp.watch(paths.scripts.src, scripts);
 }
-
-// notyfi
-// function errors() {
-//   return gulp.src("src/*")
-//   .pipe(through(function () {
-//     this.emit("error", new Error("Something happend: Error message!"))
-//   })).on("error", notify.onError("Error: <%= error.message %>"));
-// }
 
 // pug
 function templates() {
@@ -157,6 +154,12 @@ function images() {
     .pipe(gulp.dest(paths.images.dest));
 }
 
+//переносим svg
+function svgCopy() {
+  return gulp.src([paths.svgCopy.src])
+    .pipe(gulp.dest(paths.svgCopy.dest));
+}
+
 //переносим шрифты
 function fonts() {
   return gulp.src(paths.fonts.src)
@@ -189,17 +192,18 @@ exports.templates = templates;
 exports.styles = styles;
 exports.clean = clean;
 exports.images = images;
+exports.svgCopy = svgCopy;
 exports.fonts = fonts;
 exports.lintJs = lintJs;
 exports.spriteSvg = spriteSvg;
 
 // работа
 gulp.task('default', gulp.series(
-  gulp.parallel(styles, templates, scripts, lintJs, fonts, spriteSvg, images),
+  gulp.parallel(styles, templates, scripts, lintJs, fonts, spriteSvg, images, svgCopy),
   gulp.parallel(watch, server)
 ));
 // На продакшен
 gulp.task('build', gulp.series(
   clean,
-  gulp.parallel(styles, templates, scripts, lintJs, fonts, spriteSvg, images)
+  gulp.parallel(styles, templates, scripts, lintJs, fonts, spriteSvg, images, svgCopy)
 ));

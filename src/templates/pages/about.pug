@@ -26,26 +26,25 @@ block content
   
   section.section.about
     .about__left
-      .about__triangle.about__triangle_left
-        svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 470 85" preserveAspectRatio="xMidYMin slice").triangle.triangle_fill_gray
-          polygon(points="0,0 0,86 470.8,86 470,82")
+      .about__triangle
+        svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveAspectRatio="xMidYMin slice").triangle
+          polygon(points="0,0   0,86   500.8,86   500.8,75.5").triangle_fill_gray
+          polygon(points="1000,0   1000,86   500,86   500,75.5").triangle_fill_white
       .about__left-title
         svg.about__left-pic
           use(xlink:href="assets/images/sprite/sprite.svg#about_header")
-        h1.block__title Обо мне
+        h1.block-title Обо мне
       .about__left-content
         .user-desc
           .user-desc__img
-            img(src="assets/images/content/man1.jpg", alt="").user-desc__avatar
+            .user-desc__img-wrapper
+              img(src="assets/images/content/man1.jpg", alt="").user-desc__avatar
           .user-desc__title
             h2.block-smalltitle Кто я
           .user-desc__text.text__style
             p Я веб разработчик из Томска. Мне 25 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. 
             p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
     .about__right
-      .about__triangle.about__triangle_right
-        svg(xmlns:href="http://www.w3.org/2000/svg" viewbox="0 0 480 85" preserveAspectRatio="xMidYMin slice").triangle.triangle_fill_white
-          polygon(points="480,0   480,86   0,86   0,82")
       .about__right-title
         h2.block-smalltitle Чем я могу быть вам полезен
       .about__right-desc.text__style
@@ -54,86 +53,86 @@ block content
         ul.skills-list
           li.skills-list__item
             .skills-row
-              .skills-row__title Frontend
-                ul.skills-row__list
-                  li.skills-row__item
-                    .skill
-                      svg(width="130" height="130").skill__circle
-                        circle(r="45" cx="65" cy="65" stroke="#ccc"
-                        fill="none").g-circles
-                        circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
-                      .skill__title HTML5
-                  li.skills-row__item
-                    .skill
-                      svg(width="130" height="130").skill__circle
-                        circle(r="45" cx="65" cy="65" stroke="#ccc"
-                        fill="none").g-circles
-                        circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
-                      .skill__title CSS3
-                  li.skills-row__item
-                    .skill
-                      svg(width="130" height="130").skill__circle
-                        circle(r="45" cx="65" cy="65" stroke="#ccc"
-                        fill="none").g-circles
-                        circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
-                      .skill__title JavaScript & jQuery
+              h3.skills-row__title Frontend
+              ul.skills-row__list
+                li.skills-row__item
+                  .skill
+                    svg(width="130" height="130" viewBox="0 0 130 130").skill__circle
+                      circle(r="45" cx="65" cy="65" stroke="#ccc"
+                      fill="none").g-circles
+                      circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
+                    .skill__title HTML5
+                li.skills-row__item
+                  .skill
+                    svg(width="130" height="130" viewBox="0 0 130 130").skill__circle
+                      circle(r="45" cx="65" cy="65" stroke="#ccc"
+                      fill="none").g-circles
+                      circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
+                    .skill__title CSS3
+                li.skills-row__item
+                  .skill
+                    svg(width="130" height="130" viewBox="0 0 130 130").skill__circle
+                      circle(r="45" cx="65" cy="65" stroke="#ccc"
+                      fill="none").g-circles
+                      circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
+                    .skill__title JavaScript & jQuery
           li.skills-list__item
             .skills-row
-              .skills-row__title Backend
-                ul.skills-row__list
-                  li.skills-row__item
-                    .skill
-                      svg(width="130" height="130").skill__circle
-                        circle(r="45" cx="65" cy="65" stroke="#ccc"
-                        fill="none").g-circles
-                        circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
-                      .skill__title PHP
-                  li.skills-row__item
-                    .skill
-                      svg(width="130" height="130").skill__circle
-                        circle(r="45" cx="65" cy="65" stroke="#ccc"
-                        fill="none").g-circles
-                        circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
-                      .skill__title mySQL
-                  li.skills-row__item
-                    .skill
-                      svg(width="130" height="130").skill__circle
-                        circle(r="45" cx="65" cy="65" stroke="#ccc"
-                        fill="none").g-circles
-                        circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
-                      .skill__title Node.js & npm
-                  li.skills-row__item
-                    .skill
-                      svg(width="130" height="130").skill__circle
-                        circle(r="45" cx="65" cy="65" stroke="#ccc"
-                        fill="none").g-circles
-                        circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
-                      .skill__title Mongo.db
+              h3.skills-row__title Backend
+              ul.skills-row__list
+                li.skills-row__item
+                  .skill
+                    svg(width="130" height="130" viewBox="0 0 130 130").skill__circle
+                      circle(r="45" cx="65" cy="65" stroke="#ccc"
+                      fill="none").g-circles
+                      circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
+                    .skill__title PHP
+                li.skills-row__item
+                  .skill
+                    svg(width="130" height="130" viewBox="0 0 130 130").skill__circle
+                      circle(r="45" cx="65" cy="65" stroke="#ccc"
+                      fill="none").g-circles
+                      circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
+                    .skill__title mySQL
+                li.skills-row__item
+                  .skill
+                    svg(width="130" height="130" viewBox="0 0 130 130").skill__circle
+                      circle(r="45" cx="65" cy="65" stroke="#ccc"
+                      fill="none").g-circles
+                      circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
+                    .skill__title Node.js & npm
+                li.skills-row__item
+                  .skill
+                    svg(width="130" height="130" viewBox="0 0 130 130").skill__circle
+                      circle(r="45" cx="65" cy="65" stroke="#ccc"
+                      fill="none").g-circles
+                      circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
+                    .skill__title Mongo.db
           li.skills-list__item
             .skills-row
-              .skills-row__title WorkFlow
-                ul.skills-row__list
-                  li.skills-row__item
-                    .skill
-                      svg(width="130" height="130").skill__circle
-                        circle(r="45" cx="65" cy="65" stroke="#ccc"
-                        fill="none").g-circles
-                        circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
-                      .skill__title Git
-                  li.skills-row__item
-                    .skill
-                      svg(width="130" height="130").skill__circle
-                        circle(r="45" cx="65" cy="65" stroke="#ccc"
-                        fill="none").g-circles
-                        circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
-                      .skill__title Gulp
-                  li.skills-row__item
-                    .skill
-                      svg(width="130" height="130").skill__circle
-                        circle(r="45" cx="65" cy="65" stroke="#ccc"
-                        fill="none").g-circles
-                        circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
-                      .skill__title Bower
+              h3.skills-row__title WorkFlow
+              ul.skills-row__list
+                li.skills-row__item
+                  .skill
+                    svg(width="130" height="130" viewBox="0 0 130 130").skill__circle
+                      circle(r="45" cx="65" cy="65" stroke="#ccc"
+                      fill="none").g-circles
+                      circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
+                    .skill__title Git
+                li.skills-row__item
+                  .skill
+                    svg(width="130" height="130" viewBox="0 0 130 130").skill__circle
+                      circle(r="45" cx="65" cy="65" stroke="#ccc"
+                      fill="none").g-circles
+                      circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
+                    .skill__title Gulp
+                li.skills-row__item
+                  .skill
+                    svg(width="130" height="130" viewBox="0 0 130 130").skill__circle
+                      circle(r="45" cx="65" cy="65" stroke="#ccc"
+                      fill="none").g-circles
+                      circle(r="45" cx="65" cy="65" stroke="#6c9c5a" transform="rotate(-90 65 65)").sector
+                    .skill__title Bower
 
   section.section.map
     .google-map

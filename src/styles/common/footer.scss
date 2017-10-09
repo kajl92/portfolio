@@ -6,12 +6,16 @@
 .footer__main {
   display: flex;
   background: rgba(#373e42, .85);
+  flex-wrap: wrap;
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .footer__col {
   position: relative;
   flex: 1;
-  margin: 30px 30px 30px;
+  margin: 30px;
   &:after {
     content: '';
     display: block;
@@ -21,7 +25,30 @@
     position: absolute;
     top: 50%;
     left: -10%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+  }
+  &:first-child:after {
+    background: transparent;
+  }
+  @include phones {
+    &:after {
+      width: 95%;
+      height: 1px;
+      margin: auto;
+      background: #69716e;
+      position: absolute;
+      top: -21%;
+      left: 50%;
+      transform: translate(-50%);
+    }
+   text-align: center;
+    margin: 17px 0;
+  }
+}
+
+.footer_width {
+  @include tablets {
+    flex: inherit;
   }
 }
 
@@ -33,6 +60,9 @@
 .menu__list {
   display: flex;
   margin-bottom: 20px;
+  @include phones {
+    justify-content: center;
+  }
 }
 
 .menu__item {
@@ -46,7 +76,6 @@
   text-decoration: none;
   color: #fff;
   @include roboto(medium);
-  font-size: 16px;
   text-align: center;
   &:after {
     content: '';
@@ -60,6 +89,9 @@
     width: 100%;
     background: #fff;
   }
+  @include tablets {
+    font-size: 14px;
+  }
 }
 
 .footer-quote {
@@ -70,6 +102,12 @@
   @include roboto(lightitalic);
   color: #fff;
   opacity: .7;
+  @include tablets {
+    font-size: 14px;
+  }
+  @include phones {
+    text-align: center;
+  }
 }
 
 .text-bold {
@@ -82,4 +120,7 @@
   text-align: center;
   color: #fff;
   padding: 10px 0 15px;
+  @include tablets {
+    font-size: 14px;
+  }
 }

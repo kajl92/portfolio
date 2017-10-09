@@ -5,6 +5,7 @@ $w-green: #5f8a51;
 $d-green: #457935;
 
 @import './layout/normalize.scss';
+@import './layout/media.scss';
 //fonts
 @import './common/fonts.scss';
 //layout
@@ -13,6 +14,7 @@ $d-green: #457935;
 
 @import './common/footer.scss';
 @import './common/hamburger-menu.scss';
+@import './common/form.scss';
 // pages
 @import './pages/index.scss';
 @import './pages/about.scss';

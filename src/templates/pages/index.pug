@@ -6,20 +6,51 @@ block variables
 
 block content 
     section.welcome
-      .user.welcome__user
-        .user__pic
-          img(src="assets/images/content/man1.jpg", alt="").user__avatar
-        .user__desc
-          h1.user__name Максим Кайль
-          h2.user__info.user__info_padding Личный сайт веб разработчика
-        +social('social', ["vk","github","in"])
-        nav.nav
-          ul.nav__list
-            li.nav__item
-              a.nav__link(href="./work.html") Мои работы
-            li.nav__item
-              a.nav__link(href="./about.html") Обо мне
-            li.nav__item
-              a.nav__link(href="./blog.html") Блог
-      button.authorization-btn Авторизоваться
-      .copyright © Максим Кайль | Создано с любовью в LoftSchool | 2017
+      //- .user.welcome__user
+      //-   .user__pic
+      //-     img(src="assets/images/content/man1.jpg", alt="").user__avatar
+      //-   .user__desc
+      //-     h1.user__name Максим Кайль
+      //-     h2.user__info Личный сайт веб разработчика
+      //-   +social('social', ["vk","github","in"])
+      //-   nav.nav
+      //-     ul.nav__list
+      //-       li.nav__item
+      //-         a.nav__link(href="./work.html") Мои работы
+      //-       li.nav__item
+      //-         a.nav__link(href="./about.html") Обо мне
+      //-       li.nav__item
+      //-         a.nav__link(href="./blog.html") Блог
+      .user.user__auth
+        .user__auth-form
+          .user__auth-title
+            h2.block-smalltitle Авторизуйтесь
+          form(action="", method="post").form
+            .form__contact
+              label(for="name").visuallyHidden Введите логин
+              input(type="text", id="name" placeholder="Логин").form__input.form__input_width
+            .form__contact
+              label(for="email").visuallyHidden Ввидите пароль
+              input(type="text", id="email" placeholder="Пароль").form__input.form__input_width
+            .form__human
+              label.form__human-checkbox
+                input(type="checkbox", name="human" id="human" value="I human").form__checkbox
+                .form__human-checkbox__fake
+                .form__human-checkbox__text Я человек
+            .form__radio
+              .form__radio-wrapp
+                .form__redio-title Вы точно не робот?
+              .form__radio-row
+                label.form__radio-btns
+                  input(type="radio", name="robot" value="Да").form__radio-elem
+                  .form__radio-fake
+                  .form__radio-text Да
+                label.form__radio-btns
+                  input(type="radio", name="robot" value="Не уверен").form__radio-elem
+                  .form__radio-fake
+                  .form__radio-text Не уверен
+            .form__btns.form__btns_position
+              button(type="reset").form__btn.form__btn_border-radius_left На главную
+              button.form__btn.form__btn_border-radius_right Войти
+    button.authorization-btn Авторизоваться
+    .copyright © Максим Кайль | Создано с любовью в LoftSchool | 2017

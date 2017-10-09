@@ -38,6 +38,9 @@
 
 .blog__left {
   width: 25%;
+  @include tablets {
+    display: none;
+  }
 }
 
 .blog__sidebar {
@@ -81,6 +84,9 @@
 .blog__right {
   margin: 0 auto;
   width: 55%;
+  @include tablets {
+    width: 98%;
+  }
 }
 
 .traingle_blog {
@@ -103,12 +109,18 @@
   font-size: 35px;
   color: #566358;
   margin-bottom: 20px;
+  @include tablets {
+    font-size: 30px;
+  }
 }
 
 .article__data {
   @include roboto(regular);
   color: #4e8839;
   opacity: .7;
+  @include tablets {
+    font-size: 14px;
+  }
 }
 
 .article__content {

@@ -1,0 +1,19 @@
+$tv: 1800px;
+$tablets: 768px;
+$phones: 480px;
+
+@mixin tv {
+  @media screen and (max-width: $tv) {
+    @content;
+  }
+}
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
