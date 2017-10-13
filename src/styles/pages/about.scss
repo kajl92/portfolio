@@ -1,6 +1,6 @@
 .head {
-  background: url('../images/bg/forest-bg.jpg') center center no-repeat;
-  background-size: cover;
+  background: url('../images/bg/forest-bg.jpg') 0/cover fixed;
+  // background-size: cover;
   height: 600px;
   position: relative;
 }

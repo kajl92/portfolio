@@ -10,19 +10,61 @@
   <body>
     <div class="wrapper">
       <section class="welcome">
+        <div class="user welcome__user">
+          <div class="user__pic"><img class="user__avatar" src="assets/images/content/man1.jpg" alt=""></div>
+          <div class="user__desc">
+            <h1 class="user__name">Максим Кайль</h1>
+            <h2 class="user__info">Личный сайт веб разработчика</h2>
+          </div>
+          <ul class="social">
+            <li class="social__item"><a class="social__link" href="#">
+                <svg class="social__svg undefined">
+                  <use xlink:href="assets/images/sprite/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__link" href="#">
+                <svg class="social__svg undefined">
+                  <use xlink:href="assets/images/sprite/sprite.svg#github"></use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__link" href="#">
+                <svg class="social__svg undefined">
+                  <use xlink:href="assets/images/sprite/sprite.svg#in"></use>
+                </svg></a></li>
+          </ul>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link" href="./work.html">Мои работы</a></li>
+              <li class="nav__item"><a class="nav__link" href="./about.html">Обо мне</a></li>
+              <li class="nav__item"><a class="nav__link" href="./blog.html">Блог</a></li>
+            </ul>
+          </nav>
+        </div>
         <div class="user user__auth">
           <div class="user__auth-form">
             <div class="user__auth-title">
               <h2 class="block-smalltitle">Авторизуйтесь</h2>
             </div>
             <form class="form" action="" method="post">
-              <div class="form__contact">
+              <div class="form__contact form__contact-auth">
                 <label class="visuallyHidden" for="name">Введите логин</label>
-                <input class="form__input form__input_width" type="text" id="name" placeholder="Логин">
+                <div class="wrapper-icon">
+                  <div class="auth-icon">
+                    <svg class="auth-icon__svg">
+                      <use xlink:href="assets/images/sprite/sprite.svg#login"></use>
+                    </svg>
+                  </div>
+                </div>
+                <input class="form__input form__input_auth" type="text" id="name" placeholder="Логин">
               </div>
-              <div class="form__contact">
+              <div class="form__contact form__contact-auth">
                 <label class="visuallyHidden" for="email">Ввидите пароль</label>
-                <input class="form__input form__input_width" type="text" id="email" placeholder="Пароль">
+                <div class="wrapper-icon">
+                  <div class="auth-icon">
+                    <svg class="auth-icon__svg">
+                      <use xlink:href="assets/images/sprite/sprite.svg#password"></use>
+                    </svg>
+                  </div>
+                </div>
+                <input class="form__input form__input_auth" type="text" id="email" placeholder="Пароль">
               </div>
               <div class="form__human">
                 <label class="form__human-checkbox">
@@ -59,6 +101,7 @@
       <button class="authorization-btn">Авторизоваться</button>
       <div class="copyright">© Максим Кайль | Создано с любовью в LoftSchool | 2017</div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="assets/scripts/bundle.js"></script>
   </body>
 </html>

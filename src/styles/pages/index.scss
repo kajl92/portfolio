@@ -21,8 +21,17 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotateY(0deg);
   border-radius: rem(10px) rem(10px) 0 0;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: 2s;
+  &:hover {
+    animation: flip-reverse 3s both;
+    &+.user__auth {
+      animation: flip 3s both;
+    }
+  }
   @include phones {
     width: 98%;
     height: 50%;
@@ -34,12 +43,34 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotateY(-180deg);
+  backface-visibility: hidden;
   background: rgba(#122620, .6);
   border-radius: rem(10px) rem(10px) 0 0;
+  transition: 2s;
   @include phones {
+    transform: translate(-50%, -50%) rotateY(-180deg);
+    backface-visibility: hidden;
     width: 98%;
     height: 50%;
+  }
+}
+
+@keyframes flip-reverse {
+  from {
+    transform: translate(-50%, -50%) rotateY(0deg)
+  }
+  to {
+    transform: translate(-50%, -50%) rotateY(-180deg)
+  }
+}
+
+@keyframes flip {
+  from {
+    transform: translate(-50%, -50%) rotateY(-180deg)
+  }
+  to {
+    transform: translate(-50%, -50%) rotateY(0deg)
   }
 }
 

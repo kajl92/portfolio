@@ -9,6 +9,16 @@
   </head>
   <body>
     <div class="wrapper">
+      <div class="full-menu">
+        <div class="full-menu__wrapper">
+          <ul class="full-menu__list">
+            <li class="full-menu__item"><a class="full-menu__link" href="work.html">Мои работы</a></li>
+            <li class="full-menu__item"><a class="full-menu__link" href="blog.html">Блог</a></li>
+            <li class="full-menu__item"><a class="full-menu__link" href="about.html">Обо мне</a></li>
+            <li class="full-menu__item"><a class="full-menu__link" href="index.html">Авторизация</a></li>
+          </ul>
+        </div>
+      </div>
       <section class="section head">
         <div class="head__socials">
           <ul class="social">
@@ -25,12 +35,11 @@
                   <use xlink:href="assets/images/sprite/sprite.svg#in"></use>
                 </svg></a></li>
           </ul>
-        </div>
-        <div class="head__menu">
-          <div class="hamburger">
-            <button class="hamburger__btn"><span class="hamburger-top"></span><span class="hamburger-center"></span><span class="hamburger-bottom"></span></button>
-          </div>
-        </div>
+        </div><button class="hamburger hamburger--spin" type="button">
+<span class="hamburger-box">
+<span class="hamburger-inner"></span>
+</span>
+</button>
         <div class="head__title">
           <div class="section-title">
             <svg class="head-title__pic">
@@ -57,8 +66,8 @@
         <div class="about__left">
           <div class="about__triangle">
             <svg class="triangle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveAspectRatio="xMidYMin slice">
-              <polygon class="triangle_fill_gray" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
-              <polygon class="triangle_fill_white" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+              <polygon class="triangle_fill_gray" points="0,0 0,86 500.8,86 500.8,75.5"></polygon>
+              <polygon class="triangle_fill_white" points="1000,0 1000,86 500,86 500,75.5"></polygon>
             </svg>
           </div>
           <div class="about__left-title">
@@ -302,6 +311,7 @@
         <div class="footer__copyright">© Максим Кайль | Создано с любовью в LoftSchool | 2017</div>
       </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="assets/scripts/bundle.js"></script>
   </body>
 </html>

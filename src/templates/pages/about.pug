@@ -5,6 +5,7 @@ block variables
   - var title = 'Обо мне'
 
 block content
+  include ../common/fullscreen-menu.pug
   section.section.head
     .head__socials
       +social('social', ["vk","github","in"])
@@ -28,8 +29,8 @@ block content
     .about__left
       .about__triangle
         svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveAspectRatio="xMidYMin slice").triangle
-          polygon(points="0,0   0,86   500.8,86   500.8,75.5").triangle_fill_gray
-          polygon(points="1000,0   1000,86   500,86   500,75.5").triangle_fill_white
+          polygon(points="0,0 0,86 500.8,86 500.8,75.5").triangle_fill_gray
+          polygon(points="1000,0 1000,86 500,86 500,75.5").triangle_fill_white
       .about__left-title
         svg.about__left-pic
           use(xlink:href="assets/images/sprite/sprite.svg#about_header")

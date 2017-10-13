@@ -9,6 +9,16 @@
   </head>
   <body>
     <div class="wrapper">
+      <div class="full-menu">
+        <div class="full-menu__wrapper">
+          <ul class="full-menu__list">
+            <li class="full-menu__item"><a class="full-menu__link" href="work.html">Мои работы</a></li>
+            <li class="full-menu__item"><a class="full-menu__link" href="blog.html">Блог</a></li>
+            <li class="full-menu__item"><a class="full-menu__link" href="about.html">Обо мне</a></li>
+            <li class="full-menu__item"><a class="full-menu__link" href="index.html">Авторизация</a></li>
+          </ul>
+        </div>
+      </div>
       <section class="section head">
         <div class="head__socials">
           <ul class="social">
@@ -25,12 +35,11 @@
                   <use xlink:href="assets/images/sprite/sprite.svg#in"></use>
                 </svg></a></li>
           </ul>
-        </div>
-        <div class="head__menu">
-          <div class="hamburger">
-            <button class="hamburger__btn"><span class="hamburger-top"></span><span class="hamburger-center"></span><span class="hamburger-bottom"></span></button>
-          </div>
-        </div>
+        </div><button class="hamburger hamburger--spin" type="button">
+<span class="hamburger-box">
+<span class="hamburger-inner"></span>
+</span>
+</button>
         <div class="head__title">
           <div class="section-title">
             <svg class="head-title__pic">
@@ -98,7 +107,7 @@
                   <use xlink:href="assets/images/sprite/sprite.svg#arrow_down"></use>
                 </svg>
               </button>
-              <div class="slider-photo"><img class="slider-photo__pic slider-photo__pic_opacity" src="assets/images/content/site1.png" alt=""></div>
+              <div class="slider-photo"><img class="slider-photo__pic" src="assets/images/content/site1.png" alt=""></div>
             </div>
             <div class="slider-btn__right">
               <button class="slider-button">
@@ -106,7 +115,7 @@
                   <use xlink:href="assets/images/sprite/sprite.svg#arrow_down"></use>
                 </svg>
               </button>
-              <div class="slider-photo"><img class="slider-photo__pic slider-photo__pic_opacity" src="assets/images/content/site1.png" alt=""></div>
+              <div class="slider-photo"><img class="slider-photo__pic" src="assets/images/content/site1.png" alt=""></div>
             </div>
           </div>
         </div>
@@ -221,6 +230,7 @@
         </footer>
       </section>
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="assets/scripts/bundle.js"></script>
   </body>
 </html>

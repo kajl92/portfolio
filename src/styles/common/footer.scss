@@ -89,6 +89,10 @@
     width: 100%;
     background: #fff;
   }
+  &:hover:after {
+    width: 100%;
+    background: #fff;
+  }
   @include tablets {
     font-size: 14px;
   }

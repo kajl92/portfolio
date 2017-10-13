@@ -5,6 +5,7 @@ block variables
   - var title = 'Мои работы'
 
 block content
+  include ../common/fullscreen-menu.pug
   section.section.head
     .head__socials
       +social('social', ["vk","github","in"])
@@ -56,13 +57,13 @@ block content
             svg.slider-btn.slider-btn__prew
               use(xlink:href="assets/images/sprite/sprite.svg#arrow_down")
           .slider-photo
-              img(src="assets/images/content/site1.png",alt="").slider-photo__pic.slider-photo__pic_opacity
+              img(src="assets/images/content/site1.png",alt="").slider-photo__pic
         .slider-btn__right
           button.slider-button
             svg.slider-btn.slider-btn__next
               use(xlink:href="assets/images/sprite/sprite.svg#arrow_down")
           .slider-photo
-              img(src="assets/images/content/site1.png",alt="").slider-photo__pic.slider-photo__pic_opacity
+              img(src="assets/images/content/site1.png",alt="").slider-photo__pic
 
   section.section.reviews
     .works__head.reviews__head

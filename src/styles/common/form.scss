@@ -4,11 +4,11 @@
 }
 
 .form-wrap {
-  background: url(../images/bg/bg-work.png) 0/cover fixed;
   z-index: 1;
   padding: 35px 20px;
   border-radius: 10px;
   position: relative;
+  overflow: hidden;
   &:before {
     background: url(../images/bg/bg-work.png) 0/cover fixed;
     content: '';
@@ -18,6 +18,7 @@
     right: 0;
     bottom: 0;
     z-index: -1;
+    margin: -5px;
     filter: blur(5px);
     border-radius: 5px;
   }
@@ -30,6 +31,28 @@
 .form__contact {
   text-align: center;
   margin-bottom: 20px;
+  position: relative;
+}
+
+.wrapper-icon {
+  height: 49px;
+  width: 45px;
+  background: #f0efe9;
+  border-radius: 50% 0 0 50%;
+  position: relative;
+}
+
+.auth-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.auth-icon__svg {
+  width: 17px;
+  height: 17px;
+  fill: #c4cbcd;
 }
 
 .visuallyHidden {
@@ -44,21 +67,23 @@
 }
 
 .form__input {
-  width: 340px;
+  width: 100%;
   outline: none;
   border: none;
   border-radius: 40px;
   padding: 15px 20px;
 }
 
-.form__input_width {
-  width: 89%;
+.form__input_auth {
+  width: 77%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .form__textarea {
   padding: 15px;
   resize: none;
-  width: 340px;
+  width: 100%;
   height: 140px;
   outline: none;
   border: none;
@@ -110,6 +135,12 @@
   margin-bottom: 20px;
 }
 
+.form__contact-auth {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 .form__human-checkbox {
   position: relative;
   cursor: pointer;
@@ -117,7 +148,7 @@
 
 .form__checkbox {
   position: absolute;
-  left: -999999px;
+  opacity: 0;
   &:checked {
     &+.form__human-checkbox__fake {
       &::after {
@@ -180,7 +211,7 @@
 
 .form__radio-elem {
   position: absolute;
-  left: -9999px;
+  opacity: 0;
   &:checked {
     &+.form__radio-fake:after {
       width: 8px;
